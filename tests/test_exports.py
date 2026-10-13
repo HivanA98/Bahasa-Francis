@@ -258,3 +258,44 @@ def test_jeda_kotak_web_sama_dengan_versi_terminal():
     assert m, "BOX_DAYS tidak ditemukan di app.js"
     web = {int(k): int(v) for k, v in re.findall(r"(\d+)\s*:\s*(\d+)", m.group(1))}
     assert web == INTERVALS, f"jadwal web {web} berbeda dari terminal {INTERVALS}"
+
+
+def test_app_js_tidak_menimpa_class_body():
+    """Mengganti tema tidak boleh menghapus kelas lain pada <body>.
+
+    Menetapkan document.body.className akan menimpa SELURUH daftar kelas.
+    Penggantian tema harus memakai classList supaya hanya kelas tema yang
+    disentuh.
+    """
+    app = open(os.path.join(ROOT, "app.js"), encoding="utf-8").read()
+    penimpaan = re.search(r"document\.body\.className\s*=", app)
+    assert not penimpaan, (
+        "app.js menimpa document.body.className; pakai classList.add/remove"
+    )
+
+
+def test_app_js_memvalidasi_nama_tema():
+    """Nama tema dari localStorage harus disaring sebelum dipakai.
+
+    Nilai yang rusak pernah menghasilkan class="theme-[object Object]":
+    tidak ada tema yang sah, tidak ada tombol tema yang tampak aktif, dan
+    nilai rusaknya ditulis balik sehingga menetap.
+    """
+    app = open(os.path.join(ROOT, "app.js"), encoding="utf-8").read()
+    assert "THEMES" in app, "daftar tema yang dikenal tidak ada di app.js"
+    assert re.search(r"THEMES\.includes\(\s*name\s*\)", app), (
+        "setTheme tidak memeriksa apakah nama tema dikenal"
+    )
+    # Setiap tema di CSS harus terdaftar di app.js, dan sebaliknya.
+    css = open(os.path.join(ROOT, "style.css"), encoding="utf-8").read()
+    dari_css = set(re.findall(r"body\.theme-([a-z]+)", css))
+    daftar = re.search(r"const THEMES = \[([^\]]*)\]", app).group(1)
+    dari_app = set(re.findall(r'"([a-z]+)"', daftar))
+    html = open(os.path.join(ROOT, "index.html"), encoding="utf-8").read()
+    dari_html = set(re.findall(r'data-theme="([a-z]+)"', html))
+    bawaan = dari_app - dari_css          # tema bawaan didefinisikan di :root
+    assert len(bawaan) <= 1, f"lebih dari satu tema tanpa aturan CSS: {bawaan}"
+    assert dari_css <= dari_app, f"tema di CSS tidak terdaftar di app.js: {dari_css - dari_app}"
+    assert dari_html == dari_app, (
+        f"tombol tema di HTML tidak cocok dengan THEMES: {dari_html} vs {dari_app}"
+    )
