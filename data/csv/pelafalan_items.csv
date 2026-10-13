@@ -1,0 +1,34 @@
+id,type,stage,regle,prompt_fr,gloss,ipa,approx,options,options_ipa,answer,answer_text,liaison_type,mots,explain
+f-l01,lafal,1,p01,petit,kecil,pəti,pë-ti,pəti | pətit | pɛti | peti,,0,pəti,,,"Huruf t di akhir tidak dibunyikan, dan e tanpa aksen di suku pertama dibunyikan /ə/. Bentuk feminin petite barulah /pətit/."
+f-l02,lafal,2,p07,tu,kamu,ty,tü,ty | tu | tø | tə,,0,ty,,,"Huruf u Prancis dibunyikan /y/: bibir membulat seperti 'u', lidah di posisi 'i'. Bunyi /u/ ditulis ou."
+f-l03,lafal,2,p03,enfant,anak,ɑ̃fɑ̃,ang-fang,ɑ̃fɑ̃ | ɑ̃fɑ̃t | ɛ̃fɑ̃ | ɑ̃fan,,0,ɑ̃fɑ̃,,,"Dua vokal sengau yang sama, tanpa satu pun bunyi /n/, dan huruf t di akhir diam."
+f-l04,lafal,3,p08,eau,air,o,o,o | ø | ɛo | u,,0,o,,,Tiga huruf untuk satu bunyi: /o/. Gabungan eau selalu dibunyikan demikian.
+f-l05,lafal,4,p12,maison,rumah,mɛzɔ̃,mè-zong,mɛzɔ̃ | mɛsɔ̃ | mɛzɔn | mezɔ̃,,0,mɛzɔ̃,,,"Huruf s di antara dua vokal dibunyikan /z/, ai dibunyikan /ɛ/, dan on menjadi vokal sengau /ɔ̃/."
+f-l06,lafal,5,p14,ville,kota,vil,vil,vil | vij | vilə | vijə,,0,vil,,,"Ville termasuk tiga kekecualian yang ill-nya dibunyikan /il/, bukan /ij/. Bandingkan fille /fij/."
+f-l07,lafal,4,p13,heure,jam,œʁ,ör,œʁ | øʁ | œʁə | ɛʁ,,0,œʁ,,,Huruf h tidak dibunyikan dan eu di suku tertutup dibunyikan /œ/. Karena itu artikelnya l'heure.
+f-l08,lafal,6,p18,samedi,hari Sabtu,samdi,sam-di,samdi | samədi | samədɛ | sɑ̃di,,0,samdi,,,"Bunyi /ə/ di tengah kata ini hilang dalam lafal biasa. Melafalkan /samədi/ tidak salah, tetapi terdengar sangat hati-hati."
+f-h01,homophone,3,p01,,hijau,vɛʁ,vèr,vert | verre | vers | ver,vɛʁ; vɛʁ; vɛʁ; vɛʁ,0,vert,,,"Empat kata berbunyi sama /vɛʁ/: vert (hijau), verre (gelas), vers (menuju), ver (ulat). Hanya ejaan dan konteks yang membedakan."
+f-h02,homophone,3,p01,,ibu,mɛʁ,mèr,mère | mer | maire,mɛʁ; mɛʁ; mɛʁ,0,mère,,,"Tiga kata /mɛʁ/: mère (ibu), mer (laut), maire (wali kota)."
+f-h03,homophone,3,p05,,mereka adalah (bentuk être),sɔ̃,song,sont | son | sons,sɔ̃; sɔ̃; sɔ̃,0,sont,,,"Sont adalah bentuk être untuk ils/elles; son adalah kata milik ('-nya'); sons adalah jamak dari le son (bunyi). Ketiganya /sɔ̃/, dan tertukarnya sont dengan son adalah kesalahan menulis yang sangat lazim."
+f-h04,homophone,2,p07,,di mana,u,u,où | ou | houx,u; u; u,0,où,,,"Où dengan aksen berarti 'di mana'; ou tanpa aksen berarti 'atau'; houx adalah nama tanaman (holly). Ketiganya /u/, dan aksen pada où tidak mengubah bunyi, hanya arti."
+f-h05,homophone,4,p08,,air,o,o,eau | haut | au,o; o; o,0,eau,,,"Tiga ejaan berbunyi /o/: eau (air), haut (tinggi), au (leburan à + le)."
+f-h06,homophone,5,p03,,seratus,sɑ̃,sang,cent | sans | sang,sɑ̃; sɑ̃; sɑ̃,0,cent,,,"Cent (seratus), sans (tanpa), sang (darah): semuanya /sɑ̃/."
+f-h07,homophone,5,p04,,dua puluh,vɛ̃,veng,vingt | vin | vain,vɛ̃; vɛ̃; vɛ̃,0,vingt,,,"Vingt (dua puluh), vin (anggur), vain (sia-sia): semuanya /vɛ̃/."
+f-h08,homophone,6,p01,,saya tahu (bentuk savoir),sɛ,sè,sais | sait | c'est,sɛ; sɛ; sɛ,0,sais,,,"Je sais, il sait, dan c'est semuanya /sɛ/. « Je ne sais pas » dan « ce n'est pas » berbeda jauh artinya tetapi berdekatan bunyinya."
+f-g01,graphie,2,p04,,,ɛ̃,eng,ain | an | on | ou,,0,ain,,,"Gabungan ain dibunyikan /ɛ̃/ seperti pada pain dan train. Gabungan an menjadi /ɑ̃/, on menjadi /ɔ̃/, dan ou menjadi /u/."
+f-g02,graphie,2,p03,,,ɑ̃,ang,em | im | om | um,,0,em,,,"Gabungan em dibunyikan /ɑ̃/ seperti pada temps dan ensemble. Gabungan im menjadi /ɛ̃/, om menjadi /ɔ̃/, dan um menjadi /œ̃/."
+f-g03,graphie,2,p07,,,u,u,ou | u | eu | au,,0,ou,,,"Bunyi /u/ Bahasa Indonesia ditulis ou dalam Bahasa Prancis. Huruf u sendiri dibunyikan /y/, eu dibunyikan /ø/, dan au dibunyikan /o/."
+f-g04,graphie,4,p10,,,ʃ,sy,ch | gn | qu | ph,,0,ch,,,"Gabungan ch dibunyikan /ʃ/ (seperti 'sy'). Gabungan gn menjadi /ɲ/, qu menjadi /k/, dan ph menjadi /f/."
+f-g05,graphie,4,p10,,,ɲ,ny,gn | ch | ph | qu,,0,gn,,,"Gabungan gn dibunyikan /ɲ/ seperti 'ny' pada 'nyata': montagne, espagnol."
+f-g06,graphie,5,p14,,,j,y,ill | eil | ail | il,,0,ill,,,"Keempatnya memuat bunyi /j/, tetapi ill adalah bentuk yang paling umum: fille, famille, travailler. Pilihan lain hanya muncul pada akhiran kata."
+f-s01,liaison,5,p15,les amis,teman-teman itu,le zami,lé za-mi,"Wajib | Boleh, bergantung keresmian | Terlarang",,0,Wajib,obligatoire,,Liaison sesudah artikel jamak les selalu wajib: /le zami/. Melafalkan /le ami/ terdengar salah bagi penutur asli.
+f-s02,liaison,5,p15,vous avez,Anda punya,vu zave,vu za-vé,"Wajib | Boleh, bergantung keresmian | Terlarang",,0,Wajib,obligatoire,,"Liaison antara kata ganti dan kata kerjanya wajib: /vu zave/, /nu zavɔ̃/, /il zɔ̃/."
+f-s03,liaison,6,p16,et il,dan dia,e il,é il,"Wajib | Boleh, bergantung keresmian | Terlarang",,2,Terlarang,interdite,,"Huruf t pada et tidak pernah dihubungkan: /e il/, bukan /e til/. Inilah larangan liaison yang paling sering dilanggar pemula."
+f-s04,liaison,6,p16,les héros,para pahlawan,le eʁo,lé é-ro,"Wajib | Boleh, bergantung keresmian | Terlarang",,2,Terlarang,interdite,,Kata ber-h aspiré menolak liaison: /le eʁo/. Bandingkan les hôtels /le zotɛl/ yang h-nya muet.
+f-s05,liaison,6,p15,deux enfants,dua anak,dø zɑ̃fɑ̃,dö zang-fang,"Wajib | Boleh, bergantung keresmian | Terlarang",,0,Wajib,obligatoire,,"Liaison sesudah angka wajib: /dø zɑ̃fɑ̃/, /tʁwa zɑ̃fɑ̃/, /si zɑ̃/. Huruf x dan s menjadi /z/."
+f-s06,liaison,6,p15,très aimable,sangat ramah,tʁɛ zemabl,trè zé-mabl,"Wajib | Boleh, bergantung keresmian | Terlarang",,1,"Boleh, bergantung keresmian",facultative,,Liaison sesudah kata keterangan seperti très lazim tetapi tidak wajib. Dalam pembicaraan resmi hampir selalu dipakai; dalam percakapan santai bisa ditinggalkan.
+f-e01,elision,3,p17,je + ai,saya punya,ʒe,zhé,,,0,j'ai,,je; ai,Vokal pada je dihapus dan diganti tanda kutip: j'ai. Elisi ini wajib.
+f-e02,elision,3,p17,le + hôtel,hotel itu,lotɛl,lo-tèl,,,0,l'hôtel,,le; hôtel,"Huruf h pada hôtel adalah h muet, sehingga kata ini dianggap diawali vokal: l'hôtel."
+f-e03,elision,3,p17,la + école,sekolah itu,lekɔl,lé-kol,,,0,l'école,,la; école,Bentuk feminin la juga kehilangan vokalnya: l'école. Gendernya menjadi tidak terlihat pada artikelnya.
+f-e04,elision,3,p17,ne + est,tidak (bagian pertama negasi),nɛ,nè,,,0,n'est,,ne; est,"Pada « il n'est pas », ne menjadi n' karena est diawali bunyi vokal."
+f-e05,elision,3,p17,le + livre,buku itu,lə livʁ,lë livr,,,0,le livre,,le; livre,Di depan konsonan TIDAK ada elisi: le livre tetap dua kata utuh. Elisi hanya terjadi di depan bunyi vokal.

@@ -1,0 +1,810 @@
+{
+  "module": 3,
+  "title": "Konjugasi présent",
+  "description": "Bentuk kata kerja Bahasa Prancis berubah mengikuti pelakunya. Modul ini melatih enam baris konjugasi présent de l'indicatif untuk tiga pola beraturan dan untuk kata kerja tak beraturan yang paling sering dipakai.",
+  "schema": {
+    "groupes": "tiga kelompok kata kerja beserta akhirannya",
+    "verbes": "satu entri per kata kerja; present[] berisi enam bentuk berurutan je, tu, il/elle/on, nous, vous, ils/elles",
+    "modele": "er | ir-iss | re | er-modifie | irregulier. Tiga yang pertama dibentuk mesin di frdrill/conjugaison.py; dua yang terakhir disimpan apa adanya dan WAJIB memuat note",
+    "items": "soal tulisan tangan. Soal 'apa bentuk X untuk Y' dibuat otomatis dari tabel present, sehingga kuncinya tidak mungkin menyimpang dari data",
+    "catatan_kunci": "Pengujian di tests/test_konjugasi.py membandingkan setiap tabel bermodel beraturan dengan hasil mesin. Bila data dan mesin berbeda, pengujian gagal."
+  },
+  "groupes": [
+    {
+      "id": "gr1",
+      "nom": "Kelompok 1: kata kerja -er",
+      "modele": "er",
+      "stage": 1,
+      "terminaisons": ["-e", "-es", "-e", "-ons", "-ez", "-ent"],
+      "explication": "Kelompok terbesar dan paling mudah: kira-kira 90 dari 100 kata kerja Bahasa Prancis ada di sini. Buang -er dari infinitifnya, lalu tambahkan akhiran di atas. parler menjadi parl- lalu parle, parles, parle, parlons, parlez, parlent.",
+      "note": "Empat dari enam bentuknya dibunyikan SAMA: parle, parles, parle, dan parlent semuanya /paʁl/. Yang berbeda hanya nous (-ons) dan vous (-ez). Jadi perbedaan keempat bentuk itu hanya terlihat pada tulisan, tidak terdengar."
+    },
+    {
+      "id": "gr2",
+      "nom": "Kelompok 2: kata kerja -ir dengan -iss-",
+      "modele": "ir-iss",
+      "stage": 4,
+      "terminaisons": ["-is", "-is", "-it", "-issons", "-issez", "-issent"],
+      "explication": "Kata kerja -ir yang menyisipkan -iss- pada bentuk jamak. finir menjadi finis, finis, finit, finissons, finissez, finissent. Jumlahnya sekitar 300 kata kerja.",
+      "note": "Tidak semua kata kerja -ir masuk kelompok ini. venir dan partir juga berakhiran -ir tetapi tidak memakai -iss-, sehingga keduanya masuk kelompok 3. Cara memastikannya: lihat bentuk nous di kamus."
+    },
+    {
+      "id": "gr3",
+      "nom": "Kelompok 3: kata kerja tak beraturan",
+      "modele": "irregulier",
+      "stage": 5,
+      "terminaisons": ["-s", "-s", "-t / -", "-ons", "-ez", "-ent"],
+      "explication": "Semua kata kerja yang tidak masuk dua kelompok pertama, termasuk yang paling sering dipakai: être, avoir, aller, faire, prendre, venir. Akhirannya masih sering mengikuti pola -s, -s, -t, -ons, -ez, -ent, tetapi radikalnya berubah-ubah sehingga harus dihafal satu per satu.",
+      "note": "Kelompok ini tertutup: tidak ada kata kerja baru yang masuk ke dalamnya. Kata kerja baru dalam Bahasa Prancis selalu dibentuk sebagai -er (googliser, télétravailler)."
+    },
+    {
+      "id": "gr4",
+      "nom": "Kata kerja -er dengan perubahan ejaan",
+      "modele": "er-modifie",
+      "stage": 6,
+      "terminaisons": ["-e", "-es", "-e", "-ons", "-ez", "-ent"],
+      "explication": "Akhirannya persis sama dengan kelompok 1, tetapi ejaan radikalnya disesuaikan supaya lafalnya tetap: manger menjadi mangeons (bukan mangons) agar g tetap /ʒ/, commencer menjadi commençons agar c tetap /s/, acheter menjadi achète agar e terdengar /ɛ/.",
+      "note": "Perubahan ini melayani LAFAL, bukan tata bahasa. Karena itu bentuk nous dan vous (yang akhirannya dimulai dengan o dan e) sering berbeda dari empat bentuk lainnya."
+    }
+  ],
+  "verbes": [
+    {
+      "id": "c01",
+      "infinitif": "être",
+      "ipa": "ɛtʁ",
+      "gloss": "adalah, berada",
+      "modele": "irregulier",
+      "groupe": 3,
+      "stage": 1,
+      "present": ["suis", "es", "est", "sommes", "êtes", "sont"],
+      "participe_passe": "été",
+      "auxiliaire": "avoir",
+      "note": "Kata kerja paling tak beraturan dalam Bahasa Prancis: tidak satu pun bentuknya menyerupai infinitifnya. Harus dihafal utuh.",
+      "lafal_note": "es dan est dibunyikan sama: /ɛ/. êtes dibunyikan /ɛt/.",
+      "example": {
+        "fr": "Je suis étudiant et elle est professeur.",
+        "gloss": "Saya mahasiswa dan dia guru."
+      }
+    },
+    {
+      "id": "c02",
+      "infinitif": "avoir",
+      "ipa": "avwaʁ",
+      "gloss": "mempunyai",
+      "modele": "irregulier",
+      "groupe": 3,
+      "stage": 1,
+      "present": ["ai", "as", "a", "avons", "avez", "ont"],
+      "participe_passe": "eu",
+      "auxiliaire": "avoir",
+      "note": "Tak beraturan dan sangat sering dipakai. Bentuk je-nya dimulai dengan vokal sehingga selalu menjadi j'ai.",
+      "lafal_note": "ai dibunyikan /e/, as dan a dibunyikan /a/, ont dibunyikan /ɔ̃/. Jangan tertukar: ils ont /il zɔ̃/ (mereka punya) dan ils sont /il sɔ̃/ (mereka adalah).",
+      "example": {
+        "fr": "J'ai deux frères et ils ont une sœur.",
+        "gloss": "Saya punya dua saudara lelaki dan mereka punya satu saudara perempuan."
+      }
+    },
+    {
+      "id": "c05",
+      "infinitif": "parler",
+      "ipa": "paʁle",
+      "gloss": "berbicara",
+      "modele": "er",
+      "groupe": 1,
+      "stage": 1,
+      "present": ["parle", "parles", "parle", "parlons", "parlez", "parlent"],
+      "participe_passe": "parlé",
+      "auxiliaire": "avoir",
+      "note": null,
+      "lafal_note": "parle, parles, parle, parlent: keempatnya /paʁl/. Akhiran -ent pada bentuk ils TIDAK pernah dibunyikan.",
+      "example": {
+        "fr": "Nous parlons français en classe.",
+        "gloss": "Kami berbicara Bahasa Prancis di kelas."
+      }
+    },
+    {
+      "id": "c06",
+      "infinitif": "habiter",
+      "ipa": "abite",
+      "gloss": "tinggal",
+      "modele": "er",
+      "groupe": 1,
+      "stage": 2,
+      "present": ["habite", "habites", "habite", "habitons", "habitez", "habitent"],
+      "participe_passe": "habité",
+      "auxiliaire": "avoir",
+      "note": null,
+      "lafal_note": "Huruf h di awal tidak dibunyikan, sehingga je habite menjadi j'habite dan nous habitons terdengar /nu zabitɔ̃/ dengan liaison.",
+      "example": {
+        "fr": "J'habite à Bandung depuis trois ans.",
+        "gloss": "Saya sudah tiga tahun tinggal di Bandung."
+      }
+    },
+    {
+      "id": "c07",
+      "infinitif": "travailler",
+      "ipa": "tʁavaje",
+      "gloss": "bekerja",
+      "modele": "er",
+      "groupe": 1,
+      "stage": 2,
+      "present": ["travaille", "travailles", "travaille", "travaillons", "travaillez", "travaillent"],
+      "participe_passe": "travaillé",
+      "auxiliaire": "avoir",
+      "note": null,
+      "lafal_note": "Gabungan ill dibunyikan /ij/: travaille /tʁavaj/, travaillons /tʁavajɔ̃/.",
+      "example": {
+        "fr": "Vous travaillez le samedi ?",
+        "gloss": "Anda bekerja pada hari Sabtu?"
+      }
+    },
+    {
+      "id": "c08",
+      "infinitif": "aimer",
+      "ipa": "eme",
+      "gloss": "menyukai, mencintai",
+      "modele": "er",
+      "groupe": 1,
+      "stage": 2,
+      "present": ["aime", "aimes", "aime", "aimons", "aimez", "aiment"],
+      "participe_passe": "aimé",
+      "auxiliaire": "avoir",
+      "note": null,
+      "lafal_note": "Dimulai dengan vokal: j'aime. Bentuk nous aimons dan vous aimez dibunyikan dengan liaison /nu zemɔ̃/, /vu zeme/.",
+      "example": {
+        "fr": "J'aime le café, mais je préfère le thé.",
+        "gloss": "Saya suka kopi, tetapi saya lebih suka teh."
+      }
+    },
+    {
+      "id": "c03",
+      "infinitif": "aller",
+      "ipa": "ale",
+      "gloss": "pergi",
+      "modele": "irregulier",
+      "groupe": 3,
+      "stage": 2,
+      "present": ["vais", "vas", "va", "allons", "allez", "vont"],
+      "participe_passe": "allé",
+      "auxiliaire": "être",
+      "note": "Berakhiran -er tetapi BUKAN kelompok 1: empat bentuknya memakai radikal v- yang tidak ada hubungannya dengan infinitifnya. Satu-satunya kata kerja -er yang tak beraturan.",
+      "lafal_note": "vais /vɛ/, vas /va/, va /va/, vont /vɔ̃/.",
+      "example": {
+        "fr": "Je vais au marché et ils vont à l'école.",
+        "gloss": "Saya pergi ke pasar dan mereka pergi ke sekolah."
+      }
+    },
+    {
+      "id": "c09",
+      "infinitif": "regarder",
+      "ipa": "ʁəgaʁde",
+      "gloss": "melihat, menonton",
+      "modele": "er",
+      "groupe": 1,
+      "stage": 3,
+      "present": ["regarde", "regardes", "regarde", "regardons", "regardez", "regardent"],
+      "participe_passe": "regardé",
+      "auxiliaire": "avoir",
+      "note": null,
+      "lafal_note": "Bunyi /ə/ pada suku pertama sering hilang dalam percakapan: /ʁgaʁd/.",
+      "example": {
+        "fr": "Nous regardons un film ce soir.",
+        "gloss": "Kami menonton film malam ini."
+      }
+    },
+    {
+      "id": "c10",
+      "infinitif": "écouter",
+      "ipa": "ekute",
+      "gloss": "mendengarkan",
+      "modele": "er",
+      "groupe": 1,
+      "stage": 3,
+      "present": ["écoute", "écoutes", "écoute", "écoutons", "écoutez", "écoutent"],
+      "participe_passe": "écouté",
+      "auxiliaire": "avoir",
+      "note": null,
+      "lafal_note": "Dimulai dengan vokal: j'écoute. Berbeda dari entendre (mendengar tanpa sengaja), écouter berarti mendengarkan dengan sengaja.",
+      "example": {
+        "fr": "J'écoute la radio le matin.",
+        "gloss": "Saya mendengarkan radio pada pagi hari."
+      }
+    },
+    {
+      "id": "c11",
+      "infinitif": "manger",
+      "ipa": "mɑ̃ʒe",
+      "gloss": "makan",
+      "modele": "er-modifie",
+      "groupe": 1,
+      "stage": 3,
+      "present": ["mange", "manges", "mange", "mangeons", "mangez", "mangent"],
+      "participe_passe": "mangé",
+      "auxiliaire": "avoir",
+      "note": "Bentuk nous mempertahankan huruf e: mangeons, bukan mangons. Tanpa e itu, g di depan o akan dibunyikan /g/ sehingga menjadi 'mangons' /mɑ̃gɔ̃/. Berlaku untuk semua kata kerja -ger.",
+      "lafal_note": "mangeons dibunyikan /mɑ̃ʒɔ̃/, bukan /mɑ̃ʒəɔ̃/. Huruf e di sana hanya tanda ejaan, bukan bunyi.",
+      "example": {
+        "fr": "Nous mangeons du poisson le vendredi.",
+        "gloss": "Kami makan ikan pada hari Jumat."
+      }
+    },
+    {
+      "id": "c16",
+      "infinitif": "finir",
+      "ipa": "finiʁ",
+      "gloss": "selesai, mengakhiri",
+      "modele": "ir-iss",
+      "groupe": 2,
+      "stage": 4,
+      "present": ["finis", "finis", "finit", "finissons", "finissez", "finissent"],
+      "participe_passe": "fini",
+      "auxiliaire": "avoir",
+      "note": null,
+      "lafal_note": "finis, finis, finit: ketiganya /fini/, karena s dan t di akhir tidak dibunyikan. Bentuk jamaknya memunculkan /s/ ganda: /finisɔ̃/.",
+      "example": {
+        "fr": "Je finis mon travail à six heures.",
+        "gloss": "Saya menyelesaikan pekerjaan saya jam enam."
+      }
+    },
+    {
+      "id": "c17",
+      "infinitif": "choisir",
+      "ipa": "ʃwaziʁ",
+      "gloss": "memilih",
+      "modele": "ir-iss",
+      "groupe": 2,
+      "stage": 4,
+      "present": ["choisis", "choisis", "choisit", "choisissons", "choisissez", "choisissent"],
+      "participe_passe": "choisi",
+      "auxiliaire": "avoir",
+      "note": null,
+      "lafal_note": "Huruf s pertama di antara dua vokal dibunyikan /z/, sedangkan -iss- dibunyikan /s/: /ʃwazisɔ̃/.",
+      "example": {
+        "fr": "Vous choisissez le thé ou le café ?",
+        "gloss": "Anda memilih teh atau kopi?"
+      }
+    },
+    {
+      "id": "c18",
+      "infinitif": "grandir",
+      "ipa": "gʁɑ̃diʁ",
+      "gloss": "bertambah besar, tumbuh",
+      "modele": "ir-iss",
+      "groupe": 2,
+      "stage": 4,
+      "present": ["grandis", "grandis", "grandit", "grandissons", "grandissez", "grandissent"],
+      "participe_passe": "grandi",
+      "auxiliaire": "avoir",
+      "note": null,
+      "lafal_note": null,
+      "example": {
+        "fr": "Les enfants grandissent vite.",
+        "gloss": "Anak-anak itu tumbuh dengan cepat."
+      }
+    },
+    {
+      "id": "c12",
+      "infinitif": "commencer",
+      "ipa": "kɔmɑ̃se",
+      "gloss": "memulai, mulai",
+      "modele": "er-modifie",
+      "groupe": 1,
+      "stage": 4,
+      "present": ["commence", "commences", "commence", "commençons", "commencez", "commencent"],
+      "participe_passe": "commencé",
+      "auxiliaire": "avoir",
+      "note": "Bentuk nous memakai ç (c berekor): commençons. Tanpa ekor itu, c di depan o akan dibunyikan /k/ sehingga menjadi /kɔmɑ̃kɔ̃/. Berlaku untuk semua kata kerja -cer.",
+      "lafal_note": "Tanda ç hanya ada supaya c tetap dibunyikan /s/ di depan a, o, dan u.",
+      "example": {
+        "fr": "Nous commençons à huit heures.",
+        "gloss": "Kami mulai jam delapan."
+      }
+    },
+    {
+      "id": "c04",
+      "infinitif": "faire",
+      "ipa": "fɛʁ",
+      "gloss": "melakukan, membuat",
+      "modele": "irregulier",
+      "groupe": 3,
+      "stage": 4,
+      "present": ["fais", "fais", "fait", "faisons", "faites", "font"],
+      "participe_passe": "fait",
+      "auxiliaire": "avoir",
+      "note": "Dua bentuk yang menyimpang dari pola umum kelompok 3: vous faites (bukan faisez) dan ils font (bukan faient). Hanya tiga kata kerja memakai akhiran -tes pada vous: être, faire, dire.",
+      "lafal_note": "faisons dibunyikan /fəzɔ̃/ — ai di sana dibunyikan /ə/, satu-satunya kekecualian seperti ini dalam konjugasi.",
+      "example": {
+        "fr": "Qu'est-ce que vous faites aujourd'hui ?",
+        "gloss": "Apa yang Anda lakukan hari ini?"
+      }
+    },
+    {
+      "id": "c19",
+      "infinitif": "vendre",
+      "ipa": "vɑ̃dʁ",
+      "gloss": "menjual",
+      "modele": "re",
+      "groupe": 3,
+      "stage": 5,
+      "present": ["vends", "vends", "vend", "vendons", "vendez", "vendent"],
+      "participe_passe": "vendu",
+      "auxiliaire": "avoir",
+      "note": null,
+      "lafal_note": "vends, vends, vend: ketiganya /vɑ̃/. Bentuk il tidak memakai akhiran sama sekali karena radikalnya sudah berakhiran d.",
+      "example": {
+        "fr": "Ils vendent des fruits au marché.",
+        "gloss": "Mereka menjual buah-buahan di pasar."
+      }
+    },
+    {
+      "id": "c20",
+      "infinitif": "attendre",
+      "ipa": "atɑ̃dʁ",
+      "gloss": "menunggu",
+      "modele": "re",
+      "groupe": 3,
+      "stage": 5,
+      "present": ["attends", "attends", "attend", "attendons", "attendez", "attendent"],
+      "participe_passe": "attendu",
+      "auxiliaire": "avoir",
+      "note": null,
+      "lafal_note": "Tidak memerlukan kata depan: « j'attends le bus », bukan « j'attends pour le bus ».",
+      "example": {
+        "fr": "J'attends le bus depuis dix minutes.",
+        "gloss": "Saya sudah sepuluh menit menunggu bus."
+      }
+    },
+    {
+      "id": "c21",
+      "infinitif": "répondre",
+      "ipa": "ʁepɔ̃dʁ",
+      "gloss": "menjawab",
+      "modele": "re",
+      "groupe": 3,
+      "stage": 5,
+      "present": ["réponds", "réponds", "répond", "répondons", "répondez", "répondent"],
+      "participe_passe": "répondu",
+      "auxiliaire": "avoir",
+      "note": null,
+      "lafal_note": "Memakai kata depan à untuk orang atau pertanyaan: « je réponds à la question ».",
+      "example": {
+        "fr": "Elle répond à toutes les questions.",
+        "gloss": "Dia menjawab semua pertanyaan."
+      }
+    },
+    {
+      "id": "c22",
+      "infinitif": "prendre",
+      "ipa": "pʁɑ̃dʁ",
+      "gloss": "mengambil, naik",
+      "modele": "irregulier",
+      "groupe": 3,
+      "stage": 5,
+      "present": ["prends", "prends", "prend", "prenons", "prenez", "prennent"],
+      "participe_passe": "pris",
+      "auxiliaire": "avoir",
+      "note": "Mirip model -re tetapi radikalnya berubah tiga kali: prend- (tunggal), pren- (nous, vous), prenn- (ils). Huruf d hilang pada bentuk jamak.",
+      "lafal_note": "prenons /pʁənɔ̃/ dengan vokal /ə/, tetapi prennent /pʁɛn/ dengan vokal /ɛ/. Dua n mengubah bunyi vokal sebelumnya.",
+      "example": {
+        "fr": "Nous prenons le train de huit heures.",
+        "gloss": "Kami naik kereta jam delapan."
+      }
+    },
+    {
+      "id": "c23",
+      "infinitif": "comprendre",
+      "ipa": "kɔ̃pʁɑ̃dʁ",
+      "gloss": "mengerti",
+      "modele": "irregulier",
+      "groupe": 3,
+      "stage": 5,
+      "present": ["comprends", "comprends", "comprend", "comprenons", "comprenez", "comprennent"],
+      "participe_passe": "compris",
+      "auxiliaire": "avoir",
+      "note": "Mengikuti prendre sepenuhnya, karena tersusun dari com- + prendre. Begitu pula apprendre (belajar) dan reprendre (mengambil kembali).",
+      "lafal_note": "« Je ne comprends pas » /ʒə nə kɔ̃pʁɑ̃ pa/ adalah kalimat yang paling sering diperlukan pemula.",
+      "example": {
+        "fr": "Je comprends, mais je ne parle pas encore bien.",
+        "gloss": "Saya mengerti, tetapi saya belum bisa berbicara dengan baik."
+      }
+    },
+    {
+      "id": "c24",
+      "infinitif": "venir",
+      "ipa": "vəniʁ",
+      "gloss": "datang",
+      "modele": "irregulier",
+      "groupe": 3,
+      "stage": 5,
+      "present": ["viens", "viens", "vient", "venons", "venez", "viennent"],
+      "participe_passe": "venu",
+      "auxiliaire": "être",
+      "note": "Berakhiran -ir tetapi tidak memakai -iss-, sehingga bukan kelompok 2. Radikalnya berganti antara vien-, ven-, dan vienn-.",
+      "lafal_note": "viens, viens, vient: ketiganya /vjɛ̃/ dengan vokal sengau. viennent /vjɛn/ kehilangan sengaunya karena ada dua n.",
+      "example": {
+        "fr": "D'où venez-vous ? — Je viens d'Indonésie.",
+        "gloss": "Dari mana Anda berasal? — Saya berasal dari Indonesia."
+      }
+    },
+    {
+      "id": "c25",
+      "infinitif": "partir",
+      "ipa": "paʁtiʁ",
+      "gloss": "berangkat, pergi",
+      "modele": "irregulier",
+      "groupe": 3,
+      "stage": 6,
+      "present": ["pars", "pars", "part", "partons", "partez", "partent"],
+      "participe_passe": "parti",
+      "auxiliaire": "être",
+      "note": "Kata kerja -ir tanpa -iss-: bentuk tunggalnya kehilangan huruf t dari radikalnya (pars, bukan partis). Pola yang sama pada dormir dan sortir.",
+      "lafal_note": "pars, pars, part: ketiganya /paʁ/.",
+      "example": {
+        "fr": "Le train part dans cinq minutes.",
+        "gloss": "Keretanya berangkat lima menit lagi."
+      }
+    },
+    {
+      "id": "c26",
+      "infinitif": "pouvoir",
+      "ipa": "puvwaʁ",
+      "gloss": "dapat, bisa",
+      "modele": "irregulier",
+      "groupe": 3,
+      "stage": 6,
+      "present": ["peux", "peux", "peut", "pouvons", "pouvez", "peuvent"],
+      "participe_passe": "pu",
+      "auxiliaire": "avoir",
+      "note": "Bentuk je dan tu berakhiran -x, bukan -s: je peux, tu peux. Hanya pouvoir dan vouloir yang begitu.",
+      "lafal_note": "peux, peux, peut: ketiganya /pø/. peuvent /pœv/.",
+      "example": {
+        "fr": "Est-ce que vous pouvez répéter ?",
+        "gloss": "Bisakah Anda mengulangi?"
+      }
+    },
+    {
+      "id": "c27",
+      "infinitif": "vouloir",
+      "ipa": "vulwaʁ",
+      "gloss": "ingin, mau",
+      "modele": "irregulier",
+      "groupe": 3,
+      "stage": 6,
+      "present": ["veux", "veux", "veut", "voulons", "voulez", "veulent"],
+      "participe_passe": "voulu",
+      "auxiliaire": "avoir",
+      "note": "Sejajar dengan pouvoir, termasuk akhiran -x pada je dan tu. Radikalnya berganti antara veu-, voul-, dan veul-.",
+      "lafal_note": "Dalam percakapan sopan dipakai bentuk conditionnel « je voudrais » (saya ingin), bukan « je veux » yang terdengar menuntut.",
+      "example": {
+        "fr": "Je voudrais un café, s'il vous plaît.",
+        "gloss": "Saya ingin satu kopi, tolong."
+      }
+    },
+    {
+      "id": "c28",
+      "infinitif": "savoir",
+      "ipa": "savwaʁ",
+      "gloss": "mengetahui",
+      "modele": "irregulier",
+      "groupe": 3,
+      "stage": 6,
+      "present": ["sais", "sais", "sait", "savons", "savez", "savent"],
+      "participe_passe": "su",
+      "auxiliaire": "avoir",
+      "note": "Radikalnya berganti antara sai- dan sav-. Jangan tertukar dengan connaître yang juga diterjemahkan 'tahu': savoir untuk fakta dan keterampilan, connaître untuk orang dan tempat.",
+      "lafal_note": "sais, sais, sait: ketiganya /sɛ/, sama dengan c'est.",
+      "example": {
+        "fr": "Je ne sais pas où est la gare.",
+        "gloss": "Saya tidak tahu di mana stasiunnya."
+      }
+    },
+    {
+      "id": "c29",
+      "infinitif": "dire",
+      "ipa": "diʁ",
+      "gloss": "mengatakan",
+      "modele": "irregulier",
+      "groupe": 3,
+      "stage": 6,
+      "present": ["dis", "dis", "dit", "disons", "dites", "disent"],
+      "participe_passe": "dit",
+      "auxiliaire": "avoir",
+      "note": "Bentuk vous-nya dites, bukan disez. Hanya tiga kata kerja memakai akhiran -tes: vous êtes, vous faites, vous dites.",
+      "lafal_note": "dis, dis, dit: ketiganya /di/.",
+      "example": {
+        "fr": "Comment dit-on « merci » en indonésien ?",
+        "gloss": "Bagaimana mengatakan « terima kasih » dalam Bahasa Indonesia?"
+      }
+    },
+    {
+      "id": "c30",
+      "infinitif": "boire",
+      "ipa": "bwaʁ",
+      "gloss": "minum",
+      "modele": "irregulier",
+      "groupe": 3,
+      "stage": 6,
+      "present": ["bois", "bois", "boit", "buvons", "buvez", "boivent"],
+      "participe_passe": "bu",
+      "auxiliaire": "avoir",
+      "note": "Radikalnya berganti tiga kali: boi-, buv-, boiv-. Perubahan ini tidak bisa diterka dari infinitifnya.",
+      "lafal_note": "bois, bois, boit: ketiganya /bwa/, sama dengan bois (kayu).",
+      "example": {
+        "fr": "Je bois du thé et elle boit du café.",
+        "gloss": "Saya minum teh dan dia minum kopi."
+      }
+    },
+    {
+      "id": "c13",
+      "infinitif": "acheter",
+      "ipa": "aʃte",
+      "gloss": "membeli",
+      "modele": "er-modifie",
+      "groupe": 1,
+      "stage": 6,
+      "present": ["achète", "achètes", "achète", "achetons", "achetez", "achètent"],
+      "participe_passe": "acheté",
+      "auxiliaire": "avoir",
+      "note": "Empat bentuk memakai aksen grave: achète. Aksen itu muncul karena huruf e menjadi suku kata terakhir yang bertekanan sehingga dibunyikan /ɛ/, bukan /ə/. Bentuk nous dan achetons tidak memerlukannya.",
+      "lafal_note": "achète /aʃɛt/ tetapi achetons /aʃtɔ̃/ — pada bentuk nous, e-nya hilang sama sekali.",
+      "example": {
+        "fr": "J'achète du pain tous les matins.",
+        "gloss": "Saya membeli roti setiap pagi."
+      }
+    },
+    {
+      "id": "c14",
+      "infinitif": "préférer",
+      "ipa": "pʁefeʁe",
+      "gloss": "lebih menyukai",
+      "modele": "er-modifie",
+      "groupe": 1,
+      "stage": 6,
+      "present": ["préfère", "préfères", "préfère", "préférons", "préférez", "préfèrent"],
+      "participe_passe": "préféré",
+      "auxiliaire": "avoir",
+      "note": "Aksen aigu pada suku terakhir berubah menjadi grave di empat bentuk: préfère. Sama seperti acheter, perubahan ini mengikuti letak tekanan kata.",
+      "lafal_note": "préfère /pʁefɛʁ/ dengan /ɛ/, préférons /pʁefeʁɔ̃/ dengan /e/.",
+      "example": {
+        "fr": "Je préfère le thé, mais nous préférons tous le café ici.",
+        "gloss": "Saya lebih suka teh, tetapi di sini kami semua lebih suka kopi."
+      }
+    },
+    {
+      "id": "c15",
+      "infinitif": "appeler",
+      "ipa": "aple",
+      "gloss": "memanggil, menelepon",
+      "modele": "er-modifie",
+      "groupe": 1,
+      "stage": 6,
+      "present": ["appelle", "appelles", "appelle", "appelons", "appelez", "appellent"],
+      "participe_passe": "appelé",
+      "auxiliaire": "avoir",
+      "note": "Empat bentuk menggandakan huruf l: appelle. Penggandaan itu membuat e sebelumnya dibunyikan /ɛ/, pekerjaan yang sama dengan aksen grave pada acheter.",
+      "lafal_note": "appelle /apɛl/ tetapi appelons /aplɔ̃/. Bentuk « je m'appelle » (nama saya) memakai kata kerja ini.",
+      "example": {
+        "fr": "Je m'appelle Ivan. Comment vous appelez-vous ?",
+        "gloss": "Nama saya Ivan. Siapa nama Anda?"
+      }
+    }
+  ],
+  "items": [
+    {
+      "id": "k-q01",
+      "type": "mcq",
+      "stage": 1,
+      "prompt": "Mengapa bentuk kata kerja Bahasa Prancis berubah-ubah mengikuti pelakunya?",
+      "prompt_fr": null,
+      "options_lang": "id",
+      "options": [
+        "Karena setiap kata ganti menuntut akhiran kata kerjanya sendiri",
+        "Karena kata kerjanya mengikuti gender pelakunya",
+        "Karena kata gantinya boleh dihilangkan seperti dalam Bahasa Indonesia",
+        "Karena bentuknya mengikuti waktu kejadian saja"
+      ],
+      "answer": 0,
+      "explain": "Setiap orang (je, tu, il, nous, vous, ils) memiliki akhiran sendiri. Gender pelaku tidak mengubah bentuk présent; yang berubah karena gender adalah kata sifat dan participe passé dengan être."
+    },
+    {
+      "id": "k-q02",
+      "type": "mcq",
+      "stage": 1,
+      "prompt": "Manakah bentuk être yang benar untuk nous?",
+      "prompt_fr": null,
+      "options_lang": "fr",
+      "options": ["sommes", "êtes", "sont", "suis"],
+      "answer": 0,
+      "explain": "nous sommes. êtes untuk vous, sont untuk ils/elles, dan suis untuk je."
+    },
+    {
+      "id": "k-q03",
+      "type": "mcq",
+      "stage": 1,
+      "prompt": "Berapa bentuk parler di présent yang dibunyikan /paʁl/?",
+      "prompt_fr": null,
+      "options_lang": "id",
+      "options": [
+        "Empat: parle, parles, parle, parlent",
+        "Dua: parle dan parles",
+        "Enam, semuanya sama",
+        "Satu, hanya parle"
+      ],
+      "answer": 0,
+      "explain": "Akhiran -e, -es, dan -ent tidak dibunyikan. Hanya nous parlons /paʁlɔ̃/ dan vous parlez /paʁle/ yang berbeda bunyinya."
+    },
+    {
+      "id": "k-q04",
+      "type": "mcq",
+      "stage": 2,
+      "prompt": "Apa yang salah pada kalimat « Je allons au marché »?",
+      "prompt_fr": "Je allons au marché",
+      "options_lang": "id",
+      "options": [
+        "Bentuk allons untuk nous, sedangkan je memakai vais",
+        "Seharusnya memakai kata depan à, bukan au",
+        "Kata kerjanya seharusnya diletakkan di akhir",
+        "Je seharusnya menjadi j' di depan konsonan"
+      ],
+      "answer": 0,
+      "explain": "Bentuknya harus sepadan dengan kata gantinya: je vais, nous allons. Di depan konsonan, je tidak mengalami elisi."
+    },
+    {
+      "id": "k-q05",
+      "type": "mcq",
+      "stage": 2,
+      "prompt": "Manakah bentuk avoir yang benar untuk ils?",
+      "prompt_fr": null,
+      "options_lang": "fr",
+      "options": ["ont", "sont", "avons", "as"],
+      "answer": 0,
+      "explain": "ils ont. Jangan tertukar dengan ils sont (être). Dalam « ils ont » terdengar liaison /il zɔ̃/."
+    },
+    {
+      "id": "k-q06",
+      "type": "mcq",
+      "stage": 3,
+      "prompt": "Mengapa bentuk nous dari manger ditulis mangeons dan bukan mangons?",
+      "prompt_fr": "nous mangeons",
+      "options_lang": "id",
+      "options": [
+        "Agar huruf g tetap dibunyikan /ʒ/ di depan o",
+        "Karena semua kata kerja -ger menambahkan e di setiap bentuk",
+        "Karena bentuk nous selalu memuat huruf e",
+        "Karena manger tidak beraturan sepenuhnya"
+      ],
+      "answer": 0,
+      "explain": "Huruf g dibunyikan /ʒ/ hanya di depan e dan i. Di depan o ia menjadi /g/, karena itu e dipertahankan sebagai penanda ejaan. Akhirannya sendiri tetap -ons."
+    },
+    {
+      "id": "k-q07",
+      "type": "mcq",
+      "stage": 3,
+      "prompt": "Bentuk mana yang benar untuk « kami bekerja »?",
+      "prompt_fr": null,
+      "options_lang": "fr",
+      "options": ["nous travaillons", "nous travaillez", "nous travaille", "nous travaillent"],
+      "answer": 0,
+      "explain": "Akhiran -ons selalu untuk nous. Akhiran -ez untuk vous, dan -ent untuk ils/elles."
+    },
+    {
+      "id": "k-q08",
+      "type": "mcq",
+      "stage": 4,
+      "prompt": "Apa tanda bahwa sebuah kata kerja -ir termasuk kelompok 2?",
+      "prompt_fr": null,
+      "options_lang": "id",
+      "options": [
+        "Bentuk nous-nya menyisipkan -iss-: nous finissons",
+        "Infinitifnya berakhiran -ir",
+        "Bentuk je-nya berakhiran -is",
+        "Participe passé-nya berakhiran -i"
+      ],
+      "answer": 0,
+      "explain": "Berakhiran -ir saja tidak cukup: venir dan partir juga begitu tetapi masuk kelompok 3. Yang memastikan adalah sisipan -iss- pada bentuk jamak."
+    },
+    {
+      "id": "k-q09",
+      "type": "mcq",
+      "stage": 4,
+      "prompt": "Manakah bentuk faire yang benar untuk vous?",
+      "prompt_fr": null,
+      "options_lang": "fr",
+      "options": ["faites", "faisez", "faitez", "font"],
+      "answer": 0,
+      "explain": "vous faites. Hanya tiga kata kerja memakai akhiran -tes untuk vous: vous êtes, vous faites, vous dites."
+    },
+    {
+      "id": "k-q10",
+      "type": "mcq",
+      "stage": 5,
+      "prompt": "Mengapa bentuk il dari vendre tidak memakai akhiran apa pun (il vend)?",
+      "prompt_fr": "il vend",
+      "options_lang": "id",
+      "options": [
+        "Karena radikalnya sudah berakhiran d, yang menggantikan akhiran -t",
+        "Karena vendre tidak beraturan",
+        "Karena bentuk il selalu tanpa akhiran",
+        "Karena huruf d-nya memang akhiran"
+      ],
+      "answer": 0,
+      "explain": "Pola kelompok 3 adalah -s, -s, -t. Pada radikal berakhiran d, huruf d itu sudah mengisi tempat -t, sehingga ditulis il vend dan il attend."
+    },
+    {
+      "id": "k-q11",
+      "type": "mcq",
+      "stage": 5,
+      "prompt": "Manakah bentuk prendre yang benar untuk nous?",
+      "prompt_fr": null,
+      "options_lang": "fr",
+      "options": ["prenons", "prendons", "prennons", "prenez"],
+      "answer": 0,
+      "explain": "nous prenons: huruf d hilang pada bentuk jamak. Bentuk ils memakai dua n: prennent."
+    },
+    {
+      "id": "k-q12",
+      "type": "mcq",
+      "stage": 5,
+      "prompt": "Kata kerja mana yang memakai auxiliaire être pada passé composé?",
+      "prompt_fr": null,
+      "options_lang": "fr",
+      "options": ["aller", "manger", "parler", "finir"],
+      "answer": 0,
+      "explain": "Sekelompok kecil kata kerja perpindahan dan perubahan keadaan memakai être: aller, venir, partir, arriver, entrer, sortir, naître, mourir, rester, tomber. Selebihnya memakai avoir."
+    },
+    {
+      "id": "k-q13",
+      "type": "mcq",
+      "stage": 6,
+      "prompt": "Mengapa bentuk je dari acheter ditulis j'achète dengan aksen grave?",
+      "prompt_fr": "j'achète",
+      "options_lang": "id",
+      "options": [
+        "Karena huruf e itu menjadi suku terakhir bertekanan sehingga dibunyikan /ɛ/",
+        "Karena semua bentuk je memakai aksen grave",
+        "Karena acheter termasuk kelompok 3",
+        "Karena aksennya membedakannya dari kata lain"
+      ],
+      "answer": 0,
+      "explain": "Pada j'achète, suku -chè- bertekanan sehingga e dibunyikan /ɛ/ dan ditandai aksen grave. Pada nous achetons, tekanan berpindah ke -tons sehingga e-nya hilang: /aʃtɔ̃/."
+    },
+    {
+      "id": "k-q14",
+      "type": "mcq",
+      "stage": 6,
+      "prompt": "Manakah bentuk pouvoir yang benar untuk je?",
+      "prompt_fr": null,
+      "options_lang": "fr",
+      "options": ["peux", "peus", "peut", "pouve"],
+      "answer": 0,
+      "explain": "je peux, dengan -x. Hanya pouvoir dan vouloir memakai akhiran -x pada je dan tu."
+    },
+    {
+      "id": "k-q15",
+      "type": "mcq",
+      "stage": 6,
+      "prompt": "Bentuk mana yang benar untuk « mereka minum »?",
+      "prompt_fr": null,
+      "options_lang": "fr",
+      "options": ["ils boivent", "ils buvent", "ils boient", "ils bois"],
+      "answer": 0,
+      "explain": "ils boivent, dengan radikal boiv-. Radikal buv- hanya dipakai untuk nous buvons dan vous buvez."
+    },
+    {
+      "id": "k-q16",
+      "type": "mcq",
+      "stage": 6,
+      "prompt": "Kata kerja baru dalam Bahasa Prancis modern hampir selalu masuk kelompok mana?",
+      "prompt_fr": null,
+      "options_lang": "id",
+      "options": [
+        "Kelompok 1 (-er), karena kelompok itu masih terbuka",
+        "Kelompok 2 (-ir), karena paling teratur",
+        "Kelompok 3, karena paling banyak anggotanya",
+        "Tidak ada kata kerja baru dalam Bahasa Prancis"
+      ],
+      "answer": 0,
+      "explain": "Kelompok 1 masih menerima anggota baru (télétravailler, googliser). Kelompok 2 hampir tertutup dan kelompok 3 sudah tertutup sama sekali."
+    }
+  ]
+}

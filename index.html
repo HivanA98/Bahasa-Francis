@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Le français — Latihan Bahasa Prancis</title>
+  <meta name="description" content="Kartu latihan Bahasa Prancis tingkat A1 untuk penutur Bahasa Indonesia: kosakata berlafal IPA, gender dan artikel, konjugasi, pelafalan, serta kata serapan dan faux-amis." />
+  <meta name="color-scheme" content="light dark" />
+
+  <!-- Font untuk teks Prancis. Bila luring, jatuh ke font sistem. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="theme-papier">
+
+<header class="masthead">
+  <h1 class="title" lang="fr">Le&nbsp;français</h1>
+  <p class="subtitle">Latihan Bahasa Prancis tingkat A1 &middot; untuk penutur Bahasa Indonesia</p>
+  <div class="theme-switcher" role="group" aria-label="Tema tampilan">
+    <button class="theme-dot papier"  data-theme="papier"  aria-pressed="true"  title="Papier (kertas)"></button>
+    <button class="theme-dot nuit"    data-theme="nuit"    aria-pressed="false" title="Nuit (malam)"></button>
+    <button class="theme-dot lavande" data-theme="lavande" aria-pressed="false" title="Lavande (lavender)"></button>
+  </div>
+</header>
+
+<nav class="tabs" id="tabs" aria-label="Modul latihan">
+  <button data-mode="kosakata"   aria-pressed="true">Kosakata<span>0</span></button>
+  <button data-mode="tatabahasa" aria-pressed="false">Tata bahasa<span>0</span></button>
+  <button data-mode="konjugasi"  aria-pressed="false">Konjugasi<span>0</span></button>
+  <button data-mode="pelafalan"  aria-pressed="false">Pelafalan<span>0</span></button>
+  <button data-mode="serapan"    aria-pressed="false">Serapan &amp; faux-amis<span>0</span></button>
+</nav>
+
+<main class="stage">
+
+  <div class="search">
+    <input type="search" id="search" placeholder="Cari: maison, rumah, mè-zong, nom …  ( / )"
+           autocomplete="off" aria-label="Cari kartu" />
+  </div>
+
+  <nav class="chips" id="chips" aria-label="Filter kategori"></nav>
+
+  <div class="options">
+    <div class="segmented" id="stages" role="group" aria-label="Batas tahap">
+      <button data-stage="0" aria-pressed="true">Semua tahap</button>
+      <button data-stage="1" aria-pressed="false">1</button>
+      <button data-stage="2" aria-pressed="false">2</button>
+      <button data-stage="3" aria-pressed="false">3</button>
+      <button data-stage="4" aria-pressed="false">4</button>
+      <button data-stage="5" aria-pressed="false">5</button>
+      <button data-stage="6" aria-pressed="false">6</button>
+    </div>
+    <div class="toggles">
+      <label class="toggle" title="Lafal IPA beserta ejaan bantu berbahasa Indonesia. Dinyalakan secara bawaan karena ejaan Prancis tidak bisa dibaca apa adanya.">
+        <input type="checkbox" id="tg-lafal" checked /> Lafal
+      </label>
+      <label class="toggle" id="wrap-artikel" title="Sembunyikan artikel (le/la/l') pada sisi depan, untuk melatih ingatan gender">
+        <input type="checkbox" id="tg-artikel" /> Sembunyikan artikel
+      </label>
+      <label class="toggle" id="wrap-arah" title="Tukar arah: dari arti Indonesia ke kata Prancis">
+        <input type="checkbox" id="tg-arah" /> Indonesia &rarr; Prancis
+      </label>
+      <label class="toggle" title="Hanya tampilkan kartu yang sudah waktunya diulang menurut kotak Leitner">
+        <input type="checkbox" id="tg-due" /> Jatuh tempo saja
+      </label>
+      <label class="toggle" title="Sembunyikan kartu yang sudah mencapai kotak 5">
+        <input type="checkbox" id="tg-hide" /> Sembunyikan yang dikuasai
+      </label>
+    </div>
+  </div>
+
+  <div class="progress-row">
+    <span class="counter" id="counter"></span>
+    <span class="progress-track"><span class="progress-fill" id="fill"></span></span>
+    <button class="linkish" id="btn-stats" type="button" aria-expanded="false">Kemajuan</button>
+  </div>
+
+  <section class="stats" id="stats" hidden aria-label="Ringkasan kemajuan"></section>
+
+  <div class="card-scene">
+    <article class="card" id="card" tabindex="0" role="group" aria-label="Kartu latihan">
+      <div class="face face-front">
+        <div class="badges">
+          <span class="badge" id="badge"></span>
+          <span class="box" id="box"></span>
+        </div>
+        <div class="front-body" id="front">Memuat&hellip;</div>
+        <div class="choices" id="choices" hidden></div>
+        <div class="hint" id="hint">Klik atau tekan Spasi untuk melihat jawaban</div>
+      </div>
+      <div class="face face-back">
+        <div class="back-body" id="back"></div>
+      </div>
+    </article>
+  </div>
+
+  <div class="controls">
+    <button class="btn" id="btn-prev">&larr;<span class="k">Sebelumnya</span></button>
+    <button class="btn btn-primary" id="btn-flip">Jawaban<span class="k">Spasi</span></button>
+    <button class="btn" id="btn-next">&rarr;<span class="k">Berikutnya</span></button>
+  </div>
+
+  <div class="controls grade" id="grade" hidden>
+    <button class="btn btn-bad" id="btn-wrong">Belum hafal<span class="k">B &middot; kembali ke kotak 1</span></button>
+    <button class="btn btn-good" id="btn-right">Sudah hafal<span class="k">H &middot; naik satu kotak</span></button>
+  </div>
+
+  <div class="controls controls-3">
+    <button class="btn" id="btn-shuffle" aria-pressed="false">Acak<span class="k">S</span></button>
+    <button class="btn" id="btn-reset" type="button">Hapus progres<span class="k">localStorage</span></button>
+  </div>
+
+  <section class="panel" id="panel"></section>
+
+</main>
+
+<script src="webdata.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

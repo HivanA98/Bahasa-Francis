@@ -1,0 +1,1038 @@
+{
+  "module": 2,
+  "title": "Tata bahasa dasar",
+  "description": "Dua belas topik inti tingkat A1, disusun untuk penutur Bahasa Indonesia. Urutannya mengikuti apa yang paling cepat diperlukan untuk menyusun kalimat sendiri, bukan urutan buku tata bahasa. Setiap topik memuat penjelasan, contoh, catatan pengecualian, dan lima soal pilihan ganda.",
+  "schema": {
+    "id": "pengenal topik (g##)",
+    "stage": "tahap 1-6",
+    "explanation": "penjelasan dalam Bahasa Indonesia, dengan perbandingan ke Bahasa Indonesia bila membantu",
+    "caveats": "pengecualian dan batas berlakunya aturan; sengaja ditulis sebagai catatan, bukan aturan mutlak",
+    "examples": "contoh kalimat tingkat A1 beserta artinya",
+    "items": "soal; options_lang menandai bahasa pilihan jawaban (fr/id); answer adalah indeks jawaban benar"
+  },
+  "topics": [
+    {
+      "id": "g01",
+      "title": "Gender kata benda: maskulin dan feminin",
+      "stage": 1,
+      "explanation": "Setiap kata benda Bahasa Prancis bergender maskulin atau feminin, termasuk benda mati. Le livre (buku) maskulin, la table (meja) feminin. Bahasa Indonesia tidak mengenal hal ini sama sekali, sehingga gender harus dihafal BERSAMA kata bendanya sejak awal: jangan menghafal « table », tetapi « la table ». Gender menentukan artikel (le/la), kata sifat (petit/petite), dan kata milik (mon/ma), jadi salah gender menular ke seluruh kalimat. Akhiran kata memberi petunjuk: -tion, -té, -ure, -ence, -ie biasanya feminin; -age, -ment, -eau, -isme biasanya maskulin.",
+      "caveats": [
+        "Akhiran hanya kecenderungan, bukan hukum. La page, la plage, dan l'image berakhiran -age tetapi feminin. Le musée dan le lycée berakhiran -ée tetapi maskulin. Le légume berakhiran -e tetapi maskulin.",
+        "Beberapa kata berganti arti bersama gendernya: le livre (buku) dan la livre (setengah kilo), le tour (putaran) dan la tour (menara). Gender di sini bukan hiasan, melainkan pembeda arti.",
+        "Gender tidak ada hubungannya dengan 'lelaki' atau 'perempuan'. La personne (orang) selalu feminin walaupun menunjuk seorang lelaki, dan le mannequin (peraga busana) selalu maskulin walaupun sering menunjuk seorang perempuan."
+      ],
+      "examples": [
+        {"fr": "Le livre est sur la table.", "gloss": "Buku itu ada di atas meja."},
+        {"fr": "La maison est grande.", "gloss": "Rumah itu besar."},
+        {"fr": "C'est un bon restaurant.", "gloss": "Itu restoran yang bagus."},
+        {"fr": "La voiture est petite.", "gloss": "Mobil itu kecil."}
+      ],
+      "items": [
+        {
+          "id": "g01-01",
+          "type": "mcq",
+          "prompt": "Mengapa gender sebaiknya dihafal bersama kata bendanya, bukan dihafal belakangan?",
+          "prompt_fr": null,
+          "options_lang": "id",
+          "options": [
+            "Karena gender menentukan artikel, kata sifat, dan kata miliknya sekaligus",
+            "Karena gender menentukan lafal kata bendanya",
+            "Karena gender menentukan bentuk kata kerjanya",
+            "Karena gender menentukan urutan kata dalam kalimat"
+          ],
+          "answer": 0,
+          "explain": "Satu kesalahan gender menular: la livre, une bon livre, ma livre semuanya salah sekaligus. Bentuk kata kerja présent tidak terpengaruh gender."
+        },
+        {
+          "id": "g01-02",
+          "type": "mcq",
+          "prompt": "Akhiran manakah yang biasanya menandai kata benda feminin?",
+          "prompt_fr": null,
+          "options_lang": "fr",
+          "options": ["-tion", "-ment", "-eau", "-isme"],
+          "answer": 0,
+          "explain": "La nation, la question, la situation. Sedangkan -ment (le moment), -eau (le bureau), dan -isme (le tourisme) biasanya maskulin."
+        },
+        {
+          "id": "g01-03",
+          "type": "mcq",
+          "prompt": "Kata benda mana yang bergender feminin?",
+          "prompt_fr": null,
+          "options_lang": "fr",
+          "options": ["voiture", "livre", "sac", "fromage"],
+          "answer": 0,
+          "explain": "La voiture. Tiga lainnya maskulin: le livre, le sac, le fromage."
+        },
+        {
+          "id": "g01-04",
+          "type": "mcq",
+          "prompt": "Apa bedanya le livre dan la livre?",
+          "prompt_fr": null,
+          "options_lang": "id",
+          "options": [
+            "Le livre berarti buku, la livre berarti setengah kilogram",
+            "Keduanya berarti buku; la livre hanya lebih sopan",
+            "Le livre untuk buku tebal, la livre untuk buku tipis",
+            "La livre adalah bentuk jamak dari le livre"
+          ],
+          "answer": 0,
+          "explain": "Dua kata berbeda yang kebetulan ditulis sama; gendernya yang membedakan arti. Bentuk jamaknya les livres untuk keduanya."
+        },
+        {
+          "id": "g01-05",
+          "type": "mcq",
+          "prompt": "Kata légume berakhiran -e tetapi maskulin. Apa yang bisa disimpulkan?",
+          "prompt_fr": "le légume",
+          "options_lang": "id",
+          "options": [
+            "Akhiran kata hanya memberi kecenderungan, sehingga gender tetap perlu diperiksa di kamus",
+            "Semua kata berakhiran -e sebenarnya maskulin",
+            "Kata itu salah tulis dan seharusnya la légume",
+            "Gender kata sayuran selalu maskulin"
+          ],
+          "answer": 0,
+          "explain": "Kecenderungan akhiran berguna untuk menduga, tetapi kamus tetap penentunya. Dalam materi ini gender setiap kata benda sudah dicantumkan."
+        }
+      ]
+    },
+    {
+      "id": "g02",
+      "title": "Artikel takrif: le, la, l', les",
+      "stage": 1,
+      "explanation": "Artikel takrif menunjuk sesuatu yang sudah tertentu, kira-kira seperti akhiran -nya dalam Bahasa Indonesia: le livre = bukunya. Bentuknya empat: le (maskulin), la (feminin), l' (di depan bunyi vokal, baik maskulin maupun feminin), dan les (jamak untuk keduanya). Berbeda dari Bahasa Indonesia, artikel hampir tidak boleh dihilangkan: « j'aime café » salah, harus « j'aime le café ». Artikel takrif juga dipakai untuk pernyataan umum (j'aime le café = saya suka kopi, kopi apa pun) dan untuk kebiasaan berulang (le lundi = setiap hari Senin).",
+      "caveats": [
+        "Elisi l' ditentukan oleh BUNYI, bukan huruf: l'heure (h tidak dibunyikan) tetapi le héros (h aspiré menghalangi elisi). Kata ber-h aspiré tidak banyak dan ditandai di kamus.",
+        "Pada bentuk jamak les, gender menjadi tidak terlihat sama sekali. Karena itu gender harus dihafal dari bentuk tunggalnya.",
+        "Sesudah kata kerja parler, nama bahasa boleh tanpa artikel: « je parle français ». Tetapi « j'apprends le français » memakai artikel. Perbedaan ini kebiasaan, bukan aturan yang bisa diturunkan."
+      ],
+      "examples": [
+        {"fr": "Le train arrive à midi.", "gloss": "Keretanya tiba tengah hari."},
+        {"fr": "L'hôtel est près de la gare.", "gloss": "Hotelnya dekat stasiun."},
+        {"fr": "Les enfants aiment le chocolat.", "gloss": "Anak-anak suka cokelat."},
+        {"fr": "Le samedi, je vais au marché.", "gloss": "Setiap hari Sabtu saya pergi ke pasar."}
+      ],
+      "items": [
+        {
+          "id": "g02-01",
+          "type": "mcq",
+          "prompt": "Artikel mana yang tepat untuk école (feminin, diawali bunyi vokal)?",
+          "prompt_fr": "___ école",
+          "options_lang": "fr",
+          "options": ["l'", "la", "le", "les"],
+          "answer": 0,
+          "explain": "L'école. Di depan bunyi vokal, le dan la sama-sama menjadi l'; gendernya baru terlihat pada kata sifatnya."
+        },
+        {
+          "id": "g02-02",
+          "type": "mcq",
+          "prompt": "Apa arti « le lundi » dengan artikel takrif?",
+          "prompt_fr": "le lundi",
+          "options_lang": "id",
+          "options": [
+            "Setiap hari Senin",
+            "Hari Senin yang akan datang",
+            "Hari Senin yang lalu",
+            "Sepanjang hari Senin saja"
+          ],
+          "answer": 0,
+          "explain": "Dengan artikel: kebiasaan berulang. Tanpa artikel, « lundi » menunjuk satu hari Senin tertentu yang terdekat."
+        },
+        {
+          "id": "g02-03",
+          "type": "mcq",
+          "prompt": "Mengapa « j'aime café » salah?",
+          "prompt_fr": null,
+          "options_lang": "id",
+          "options": [
+            "Kata benda Bahasa Prancis hampir selalu memerlukan artikel",
+            "Kata kerja aimer tidak boleh diikuti kata benda",
+            "Café seharusnya diletakkan sebelum kata kerjanya",
+            "Seharusnya j'aimes dengan -s"
+          ],
+          "answer": 0,
+          "explain": "Harus « j'aime le café ». Bahasa Indonesia bisa berdiri tanpa artikel, Bahasa Prancis tidak. Bentuk j'aime memang tanpa -s karena pelakunya je."
+        },
+        {
+          "id": "g02-04",
+          "type": "mcq",
+          "prompt": "Mengapa ditulis le héros dan bukan l'héros?",
+          "prompt_fr": "le héros",
+          "options_lang": "id",
+          "options": [
+            "Karena h pada héros adalah h aspiré yang menghalangi elisi",
+            "Karena héros bergender maskulin",
+            "Karena héros berakhiran -s",
+            "Karena elisi hanya berlaku untuk kata feminin"
+          ],
+          "answer": 0,
+          "explain": "Ada dua macam h: h muet (l'heure, l'hôtel) dan h aspiré (le héros, la haine). Keduanya tidak dibunyikan, tetapi hanya h muet yang mengizinkan elisi."
+        },
+        {
+          "id": "g02-05",
+          "type": "mcq",
+          "prompt": "Pada « les livres », gender kata bendanya terlihat dari mana?",
+          "prompt_fr": "les livres",
+          "options_lang": "id",
+          "options": [
+            "Tidak terlihat sama sekali; les dipakai untuk kedua gender",
+            "Terlihat dari akhiran -s",
+            "Terlihat dari artikel les yang maskulin",
+            "Terlihat dari bunyi /le/"
+          ],
+          "answer": 0,
+          "explain": "Bentuk jamak menyembunyikan gender. Itu satu alasan lagi untuk menghafal gender bersama bentuk tunggalnya."
+        }
+      ]
+    },
+    {
+      "id": "g03",
+      "title": "Artikel tak takrif: un, une, des",
+      "stage": 2,
+      "explanation": "Artikel tak takrif memperkenalkan sesuatu yang belum tertentu: un livre (sebuah buku), une table (sebuah meja), des livres (buku-buku, beberapa buku). Un juga berarti angka satu, sehingga « un café » bisa berarti 'sebuah kopi' atau 'satu kopi'. Yang paling asing bagi penutur Bahasa Indonesia adalah des: bentuk jamak dari un/une yang tidak punya padanan dan tidak boleh dihilangkan. « Je mange des pommes » (saya makan apel-apel) tidak bisa menjadi « je mange pommes ».",
+      "caveats": [
+        "Dalam kalimat negatif, un/une/des berubah menjadi de: « j'ai une voiture » menjadi « je n'ai pas de voiture ».",
+        "Perubahan itu TIDAK berlaku sesudah kata kerja être: « c'est un livre » menjadi « ce n'est pas un livre », bukan « pas de livre ».",
+        "Di depan kata sifat yang mendahului kata benda jamak, des boleh menjadi de dalam bahasa tulis baku: « de beaux livres ». Dalam percakapan, « des beaux livres » lazim didengar."
+      ],
+      "examples": [
+        {"fr": "C'est un livre français.", "gloss": "Ini sebuah buku Prancis."},
+        {"fr": "J'ai une question.", "gloss": "Saya punya satu pertanyaan."},
+        {"fr": "Il y a des chaises dans la chambre.", "gloss": "Ada beberapa kursi di dalam kamar."},
+        {"fr": "Je n'ai pas de voiture.", "gloss": "Saya tidak punya mobil."}
+      ],
+      "items": [
+        {
+          "id": "g03-01",
+          "type": "mcq",
+          "prompt": "Apa bentuk jamak dari « un livre »?",
+          "prompt_fr": "un livre",
+          "options_lang": "fr",
+          "options": ["des livres", "les livres", "un livres", "de livres"],
+          "answer": 0,
+          "explain": "Des livres adalah jamak tak takrif (beberapa buku). Les livres adalah jamak takrif (buku-buku itu)."
+        },
+        {
+          "id": "g03-02",
+          "type": "mcq",
+          "prompt": "Bagaimana bentuk negatif dari « j'ai une voiture »?",
+          "prompt_fr": "j'ai une voiture",
+          "options_lang": "fr",
+          "options": [
+            "je n'ai pas de voiture",
+            "je n'ai pas une voiture",
+            "je ne pas ai de voiture",
+            "j'ai ne pas de voiture"
+          ],
+          "answer": 0,
+          "explain": "Dua perubahan sekaligus: ne ... pas mengapit kata kerjanya, dan une menjadi de. Karena ai diawali vokal, ne menjadi n'."
+        },
+        {
+          "id": "g03-03",
+          "type": "mcq",
+          "prompt": "Mengapa « ce n'est pas un livre » tetap memakai un, bukan de?",
+          "prompt_fr": "ce n'est pas un livre",
+          "options_lang": "id",
+          "options": [
+            "Karena perubahan un menjadi de tidak berlaku sesudah kata kerja être",
+            "Karena livre bergender maskulin",
+            "Karena kalimat itu sebenarnya tidak negatif",
+            "Karena un di situ berarti angka satu"
+          ],
+          "answer": 0,
+          "explain": "Sesudah être, artikel tidak berubah: ce n'est pas un livre, ce ne sont pas des livres. Perubahan menjadi de hanya pada objek kata kerja lain."
+        },
+        {
+          "id": "g03-04",
+          "type": "mcq",
+          "prompt": "Mengapa « je mange pommes » salah?",
+          "prompt_fr": null,
+          "options_lang": "id",
+          "options": [
+            "Kata benda jamak tak takrif memerlukan des: je mange des pommes",
+            "Pommes seharusnya tunggal",
+            "Manger tidak bisa diikuti kata benda jamak",
+            "Seharusnya memakai les: je mange les pommes"
+          ],
+          "answer": 0,
+          "explain": "Bahasa Prancis mewajibkan penanda di depan kata benda. « Je mange les pommes » juga bertata bahasa benar, tetapi artinya 'saya makan apel-apel itu' yang sudah tertentu."
+        },
+        {
+          "id": "g03-05",
+          "type": "mcq",
+          "prompt": "Apa dua arti yang mungkin dari « un café » dalam pesanan?",
+          "prompt_fr": "un café",
+          "options_lang": "id",
+          "options": [
+            "Sebuah kopi atau satu kopi; un berfungsi ganda",
+            "Kopi hitam atau kopi susu",
+            "Kopinya atau kopi itu",
+            "Kedai kopi atau kopi yang diminum"
+          ],
+          "answer": 0,
+          "explain": "Un adalah artikel tak takrif sekaligus angka satu. Dalam « deux cafés » barulah jumlahnya tegas. (Kata café memang bisa berarti kedai, tetapi itu soal arti kata, bukan soal artikelnya.)"
+        }
+      ]
+    },
+    {
+      "id": "g04",
+      "title": "Jamak: ditulis tetapi tidak dibunyikan",
+      "stage": 2,
+      "explanation": "Bentuk jamak Bahasa Prancis dibentuk dengan menambahkan -s, dan -s itu HAMPIR SELALU TIDAK DIBUNYIKAN. Livre dan livres dibunyikan sama: /livʁ/. Yang membuat jamaknya terdengar adalah artikelnya: le /lə/ menjadi les /le/, un /œ̃/ menjadi des /de/. Bagi penutur Bahasa Indonesia yang terbiasa pada pengulangan (buku-buku), hal ini terbalik: dalam Bahasa Prancis, jamak terlihat di tulisan dan terdengar di artikelnya, bukan pada kata bendanya. Kata berakhiran -eau menambahkan -x (bureau menjadi bureaux), kata berakhiran -al menjadi -aux (hôpital menjadi hôpitaux), dan kata yang sudah berakhiran -s, -x, atau -z tidak berubah (le bus menjadi les bus).",
+      "caveats": [
+        "Di depan kata bervokal, -s jamak itu hidup kembali sebagai /z/: les amis dibunyikan /le zami/. Inilah liaison, dan di situlah jamak akhirnya terdengar pada kata bendanya.",
+        "Kekecualian -al menjadi -als ada: bal/bals, festival/festivals, carnaval/carnavals. Kekecualian -ou menjadi -oux ada tujuh kata: bijou, caillou, chou, genou, hibou, joujou, pou.",
+        "Beberapa kata berubah lafalnya saat berjamak: un œuf /œ̃ nœf/ menjadi des œufs /de zø/, un bœuf menjadi des bœufs. Jumlah kata seperti ini sangat sedikit."
+      ],
+      "examples": [
+        {"fr": "Le livre est sur la table.", "gloss": "Buku itu ada di atas meja."},
+        {"fr": "Les livres sont sur la table.", "gloss": "Buku-buku itu ada di atas meja."},
+        {"fr": "Les hôpitaux sont fermés le dimanche.", "gloss": "Rumah-rumah sakit itu tutup pada hari Minggu."},
+        {"fr": "J'ai deux amis à Paris.", "gloss": "Saya punya dua teman di Paris."}
+      ],
+      "items": [
+        {
+          "id": "g04-01",
+          "type": "mcq",
+          "prompt": "Apa perbedaan bunyi antara « le livre » dan « les livres »?",
+          "prompt_fr": null,
+          "options_lang": "id",
+          "options": [
+            "Hanya artikelnya: /lə livʁ/ dan /le livʁ/",
+            "Hanya kata bendanya, karena -s dibunyikan",
+            "Keduanya dibunyikan sama persis",
+            "Artikel dan kata bendanya sama-sama berubah bunyi"
+          ],
+          "answer": 0,
+          "explain": "Akhiran -s tidak dibunyikan, sehingga livre dan livres sama. Pembedanya le /lə/ dan les /le/ — dua bunyi vokal yang mirip dan perlu dilatih."
+        },
+        {
+          "id": "g04-02",
+          "type": "mcq",
+          "prompt": "Apa bentuk jamak dari hôpital?",
+          "prompt_fr": "hôpital",
+          "options_lang": "fr",
+          "options": ["hôpitaux", "hôpitals", "hôpitales", "hôpitail"],
+          "answer": 0,
+          "explain": "Akhiran -al menjadi -aux: hôpitaux, journaux, animaux. Kekecualiannya bal/bals dan festival/festivals."
+        },
+        {
+          "id": "g04-03",
+          "type": "mcq",
+          "prompt": "Apa bentuk jamak dari « le bus »?",
+          "prompt_fr": "le bus",
+          "options_lang": "fr",
+          "options": ["les bus", "les buss", "les busses", "les bux"],
+          "answer": 0,
+          "explain": "Kata yang sudah berakhiran -s, -x, atau -z tidak berubah: le bus/les bus, le mois/les mois, le prix/les prix."
+        },
+        {
+          "id": "g04-04",
+          "type": "mcq",
+          "prompt": "Di mana akhiran -s jamak akhirnya terdengar?",
+          "prompt_fr": "les amis",
+          "options_lang": "id",
+          "options": [
+            "Di depan kata bervokal, sebagai liaison /z/: les amis /le zami/",
+            "Di akhir kalimat, karena di sana kata dibunyikan penuh",
+            "Pada kata benda bersuku satu saja",
+            "Tidak pernah terdengar dalam keadaan apa pun"
+          ],
+          "answer": 0,
+          "explain": "Liaison membangunkan konsonan akhir yang diam. Karena itu « les amis » terdengar jelas jamak, sedangkan « les livres » tidak."
+        },
+        {
+          "id": "g04-05",
+          "type": "mcq",
+          "prompt": "Apa bentuk jamak dari bureau?",
+          "prompt_fr": "bureau",
+          "options_lang": "fr",
+          "options": ["bureaux", "bureaus", "bureauls", "bureaues"],
+          "answer": 0,
+          "explain": "Akhiran -eau menambahkan -x: bureaux, gâteaux, bateaux. Bunyinya tetap /byʁo/."
+        }
+      ]
+    },
+    {
+      "id": "g05",
+      "title": "Kata ganti pelaku dan pilihan tu atau vous",
+      "stage": 2,
+      "explanation": "Bahasa Prancis mewajibkan kata ganti pelaku di depan kata kerja. Bahasa Indonesia bisa berkata « sudah makan? », tetapi Bahasa Prancis harus « tu as mangé ? » — tanpa tu, kalimatnya tidak berdiri. Enam kata gantinya: je, tu, il/elle/on, nous, vous, ils/elles. Dua hal perlu diperhatikan. Pertama, tu dan vous keduanya berarti 'kamu': tu untuk teman, keluarga, dan sebaya; vous untuk orang yang belum dikenal, orang yang lebih tua, dan atasan — juga untuk 'kalian'. Kedua, on berarti 'orang' atau 'kita', memakai bentuk kata kerja seperti il, dan dalam percakapan sehari-hari hampir selalu menggantikan nous.",
+      "caveats": [
+        "Memakai tu kepada orang yang belum dikenal di Prancis dianggap kurang sopan, sedangkan memakai vous kepada teman dekat terasa berjarak. Bila tidak yakin, mulailah dengan vous dan tunggu lawan bicara menawarkan « on peut se tutoyer ».",
+        "Ils dipakai untuk kelompok campuran, bahkan bila hanya satu lelaki di antara banyak perempuan. Elles hanya untuk kelompok yang seluruhnya feminin. Kaidah ini memang sedang diperdebatkan di dunia Prancis, tetapi bentuk baku masih seperti itu.",
+        "On memakai bentuk kata kerja tunggal walaupun maknanya jamak: « on va au marché », bukan « on vont ». Kata sifat yang mengikutinya boleh berbentuk jamak: « on est contents »."
+      ],
+      "examples": [
+        {"fr": "Je suis indonésien et elle est française.", "gloss": "Saya orang Indonesia dan dia orang Prancis."},
+        {"fr": "Vous êtes monsieur Dupont ?", "gloss": "Anda Tuan Dupont?"},
+        {"fr": "On va au restaurant ce soir.", "gloss": "Kita pergi ke restoran malam ini."},
+        {"fr": "Tu viens avec nous ?", "gloss": "Kamu ikut dengan kami?"}
+      ],
+      "items": [
+        {
+          "id": "g05-01",
+          "type": "mcq",
+          "prompt": "Kata ganti mana yang tepat untuk berbicara dengan orang yang baru dikenal?",
+          "prompt_fr": null,
+          "options_lang": "fr",
+          "options": ["vous", "tu", "on", "il"],
+          "answer": 0,
+          "explain": "Vous adalah bentuk sopan untuk satu orang sekaligus bentuk jamak. Tu hanya untuk orang dekat."
+        },
+        {
+          "id": "g05-02",
+          "type": "mcq",
+          "prompt": "Bentuk kata kerja mana yang dipakai oleh on?",
+          "prompt_fr": null,
+          "options_lang": "id",
+          "options": [
+            "Bentuk yang sama dengan il dan elle",
+            "Bentuk yang sama dengan nous",
+            "Bentuk yang sama dengan ils",
+            "Bentuk infinitifnya"
+          ],
+          "answer": 0,
+          "explain": "« On va », bukan « on vont », walaupun artinya 'kita'. Inilah sebabnya on terasa aneh pada mulanya: makna jamak, bentuk tunggal."
+        },
+        {
+          "id": "g05-03",
+          "type": "mcq",
+          "prompt": "Mengapa « suis étudiant » bukan kalimat yang benar?",
+          "prompt_fr": null,
+          "options_lang": "id",
+          "options": [
+            "Kata ganti pelaku tidak boleh dihilangkan dalam Bahasa Prancis",
+            "Étudiant memerlukan artikel",
+            "Suis adalah bentuk untuk tu, bukan je",
+            "Urutan katanya terbalik"
+          ],
+          "answer": 0,
+          "explain": "Harus « je suis étudiant ». Berbeda dari Bahasa Indonesia dan Bahasa Spanyol, Bahasa Prancis selalu menuntut kata ganti pelakunya."
+        },
+        {
+          "id": "g05-04",
+          "type": "mcq",
+          "prompt": "Kata ganti mana untuk sekelompok orang yang terdiri dari sepuluh perempuan dan satu lelaki?",
+          "prompt_fr": null,
+          "options_lang": "fr",
+          "options": ["ils", "elles", "on", "nous"],
+          "answer": 0,
+          "explain": "Bentuk bakunya ils untuk kelompok campuran. Elles hanya bila seluruh kelompoknya feminin."
+        },
+        {
+          "id": "g05-05",
+          "type": "mcq",
+          "prompt": "Mana kalimat yang benar untuk « kami tinggal di Jakarta »?",
+          "prompt_fr": null,
+          "options_lang": "fr",
+          "options": [
+            "nous habitons à Jakarta",
+            "nous habite à Jakarta",
+            "nous habitez à Jakarta",
+            "nous habitent à Jakarta"
+          ],
+          "answer": 0,
+          "explain": "Akhiran -ons untuk nous. Bentuk habitez untuk vous dan habitent untuk ils/elles."
+        }
+      ]
+    },
+    {
+      "id": "g06",
+      "title": "Negasi: ne ... pas mengapit kata kerja",
+      "stage": 3,
+      "explanation": "Negasi Bahasa Prancis memakai DUA kata yang mengapit kata kerjanya: ne di depan, pas di belakang. « Je parle » menjadi « je ne parle pas ». Bahasa Indonesia hanya memerlukan satu kata ('tidak'), sehingga kesalahan paling sering pemula adalah melupakan salah satu bagiannya. Di depan bunyi vokal, ne menjadi n': « je n'ai pas », « il n'est pas ». Bila ada infinitif, ne ... pas tetap mengapit kata kerja yang DIKONJUGASI: « je ne veux pas manger ».",
+      "caveats": [
+        "Dalam percakapan sehari-hari, ne sering dihilangkan sama sekali: « je sais pas », « c'est pas vrai ». Hal itu lazim didengar tetapi tidak dipakai dalam tulisan resmi. Pelajar sebaiknya tetap menulis ne.",
+        "Artikel un/une/des dan du/de la berubah menjadi de sesudah negasi: « je mange du pain » menjadi « je ne mange pas de pain ». Tidak berlaku sesudah être.",
+        "Pasangan lain memakai pola yang sama: ne ... jamais (tidak pernah), ne ... rien (tidak ada apa-apa), ne ... personne (tidak ada siapa pun), ne ... plus (tidak lagi). Semuanya mengganti pas, bukan menambahnya."
+      ],
+      "examples": [
+        {"fr": "Je ne comprends pas.", "gloss": "Saya tidak mengerti."},
+        {"fr": "Il n'est pas français.", "gloss": "Dia bukan orang Prancis."},
+        {"fr": "Nous ne mangeons pas de viande.", "gloss": "Kami tidak makan daging."},
+        {"fr": "Elle ne veut pas partir.", "gloss": "Dia tidak mau berangkat."}
+      ],
+      "items": [
+        {
+          "id": "g06-01",
+          "type": "mcq",
+          "prompt": "Bagaimana bentuk negatif dari « je parle français »?",
+          "prompt_fr": "je parle français",
+          "options_lang": "fr",
+          "options": [
+            "je ne parle pas français",
+            "je parle pas ne français",
+            "je ne parle français pas",
+            "je pas parle français"
+          ],
+          "answer": 0,
+          "explain": "Ne mendahului kata kerjanya dan pas mengikutinya. Keduanya mengapit kata kerja yang dikonjugasi."
+        },
+        {
+          "id": "g06-02",
+          "type": "mcq",
+          "prompt": "Mengapa ditulis « je n'ai pas » dan bukan « je ne ai pas »?",
+          "prompt_fr": "je n'ai pas",
+          "options_lang": "id",
+          "options": [
+            "Karena ne mengalami elisi menjadi n' di depan bunyi vokal",
+            "Karena avoir selalu memakai n'",
+            "Karena ne ai sulit diucapkan oleh penutur Prancis",
+            "Karena bentuk negatif avoir memang tidak beraturan"
+          ],
+          "answer": 0,
+          "explain": "Elisi yang sama terjadi pada je menjadi j', le menjadi l', dan de menjadi d'. Bahasa Prancis menghindari dua vokal yang bertumbukan."
+        },
+        {
+          "id": "g06-03",
+          "type": "mcq",
+          "prompt": "Bagaimana bentuk negatif dari « je mange du pain »?",
+          "prompt_fr": "je mange du pain",
+          "options_lang": "fr",
+          "options": [
+            "je ne mange pas de pain",
+            "je ne mange pas du pain",
+            "je ne mange de pain pas",
+            "je mange ne pas du pain"
+          ],
+          "answer": 0,
+          "explain": "Selain menambahkan ne ... pas, artikel du berubah menjadi de. Perubahan ini mudah terlupakan."
+        },
+        {
+          "id": "g06-04",
+          "type": "mcq",
+          "prompt": "Di mana ne ... pas diletakkan pada « je veux manger »?",
+          "prompt_fr": "je veux manger",
+          "options_lang": "fr",
+          "options": [
+            "je ne veux pas manger",
+            "je veux ne pas manger",
+            "je ne veux manger pas",
+            "je ne manger veux pas"
+          ],
+          "answer": 0,
+          "explain": "Yang diapit adalah kata kerja yang dikonjugasi (veux), bukan infinitifnya (manger). Infinitif tetap di belakang."
+        },
+        {
+          "id": "g06-05",
+          "type": "mcq",
+          "prompt": "Apa arti « je ne mange jamais de viande »?",
+          "prompt_fr": "je ne mange jamais de viande",
+          "options_lang": "id",
+          "options": [
+            "Saya tidak pernah makan daging",
+            "Saya tidak makan daging hari ini",
+            "Saya belum pernah makan daging",
+            "Saya tidak suka daging"
+          ],
+          "answer": 0,
+          "explain": "Jamais menggantikan pas, bukan menambahnya: « ne ... jamais » berarti 'tidak pernah'. Menulis « ne mange pas jamais » adalah kesalahan."
+        }
+      ]
+    },
+    {
+      "id": "g07",
+      "title": "Tiga cara bertanya",
+      "stage": 3,
+      "explanation": "Bahasa Prancis memiliki tiga cara membentuk pertanyaan ya/tidak, dan ketiganya benar — yang berbeda hanya tingkat keresmiannya. (1) Intonasi saja, kalimat biasa dengan nada naik: « Tu viens ? » Paling santai dan paling sering dipakai dalam percakapan. (2) Est-ce que di depan kalimat: « Est-ce que tu viens ? » Netral, cocok untuk hampir semua keadaan, dan paling mudah bagi pemula karena urutan katanya tidak berubah. (3) Inversi, kata kerja mendahului kata ganti dengan tanda hubung: « Viens-tu ? » Paling resmi, lazim dalam tulisan. Untuk pertanyaan berkata tanya, kata tanyanya diletakkan di depan: « Où habitez-vous ? », « Pourquoi est-ce que tu apprends le français ? »",
+      "caveats": [
+        "Bentuk inversi dengan je hampir tidak dipakai kecuali untuk beberapa kata kerja tertentu (« Puis-je ? »). Untuk je, pakailah est-ce que: « Est-ce que je peux ? »",
+        "Dalam percakapan sangat santai, kata tanya boleh diletakkan di akhir: « Tu habites où ? » Bentuk itu lazim didengar tetapi jangan dipakai dalam ujian atau surat resmi.",
+        "Bila kata kerja berakhiran vokal dan diikuti il/elle/on, disisipkan -t-: « Parle-t-il français ? » Sisipan itu hanya untuk memudahkan pelafalan."
+      ],
+      "examples": [
+        {"fr": "Tu viens avec moi ?", "gloss": "Kamu ikut dengan saya?"},
+        {"fr": "Est-ce que vous parlez anglais ?", "gloss": "Apakah Anda berbahasa Inggris?"},
+        {"fr": "Où est la gare ?", "gloss": "Di mana stasiunnya?"},
+        {"fr": "Comment vous appelez-vous ?", "gloss": "Siapa nama Anda?"}
+      ],
+      "items": [
+        {
+          "id": "g07-01",
+          "type": "mcq",
+          "prompt": "Cara bertanya mana yang paling aman bagi pemula karena urutan katanya tidak berubah?",
+          "prompt_fr": null,
+          "options_lang": "id",
+          "options": [
+            "Menambahkan est-ce que di depan kalimat biasa",
+            "Membalik kata kerja dan kata gantinya",
+            "Menaikkan intonasi saja",
+            "Meletakkan kata tanya di akhir kalimat"
+          ],
+          "answer": 0,
+          "explain": "Est-ce que hanya ditempelkan di depan: « tu viens » menjadi « est-ce que tu viens ? ». Tidak ada yang perlu dipindahkan."
+        },
+        {
+          "id": "g07-02",
+          "type": "mcq",
+          "prompt": "Mana bentuk inversi yang benar dari « vous parlez français »?",
+          "prompt_fr": "vous parlez français",
+          "options_lang": "fr",
+          "options": [
+            "parlez-vous français ?",
+            "vous parlez-français ?",
+            "est-ce vous parlez français ?",
+            "parlez vous-français ?"
+          ],
+          "answer": 0,
+          "explain": "Kata kerja mendahului kata ganti, dihubungkan tanda hubung: parlez-vous. Bentuk ini yang dipakai pada « Parlez-vous français ? » yang terkenal itu."
+        },
+        {
+          "id": "g07-03",
+          "type": "mcq",
+          "prompt": "Mengapa ditulis « Parle-t-il français ? » dengan -t- di tengah?",
+          "prompt_fr": "Parle-t-il français ?",
+          "options_lang": "id",
+          "options": [
+            "Untuk mencegah dua vokal bertumbukan antara parle dan il",
+            "Karena bentuk il selalu memakai -t-",
+            "Karena kata kerjanya tak beraturan",
+            "Karena -t- menandai pertanyaan"
+          ],
+          "answer": 0,
+          "explain": "Sisipan -t- hanya muncul bila kata kerjanya berakhiran vokal: parle-t-il, va-t-elle. Pada « parlent-ils » tidak diperlukan karena sudah ada t."
+        },
+        {
+          "id": "g07-04",
+          "type": "mcq",
+          "prompt": "Mana cara yang benar untuk bertanya « Bisakah saya ... ? » dalam bahasa sehari-hari?",
+          "prompt_fr": null,
+          "options_lang": "fr",
+          "options": [
+            "Est-ce que je peux ... ?",
+            "Peux-je ... ?",
+            "Je peux-est-ce que ... ?",
+            "Peux je ... ?"
+          ],
+          "answer": 0,
+          "explain": "Inversi dengan je hampir tidak dipakai; bentuk « peux-je » tidak ada. Yang baku dan resmi adalah « Puis-je ... ? », sedangkan sehari-harinya « Est-ce que je peux ... ? »"
+        },
+        {
+          "id": "g07-05",
+          "type": "mcq",
+          "prompt": "Di mana kata tanya diletakkan dalam pertanyaan baku?",
+          "prompt_fr": "Où habitez-vous ?",
+          "options_lang": "id",
+          "options": [
+            "Di awal kalimat",
+            "Di akhir kalimat",
+            "Sesudah kata kerjanya",
+            "Di antara kata ganti dan kata kerjanya"
+          ],
+          "answer": 0,
+          "explain": "Bentuk bakunya di awal: « Où habitez-vous ? ». Bentuk « Tu habites où ? » lazim dalam percakapan santai, tetapi bukan bentuk baku."
+        }
+      ]
+    },
+    {
+      "id": "g08",
+      "title": "Artikel partitif: du, de la, des",
+      "stage": 4,
+      "explanation": "Untuk jumlah yang tidak tertentu — air, roti, keju — Bahasa Prancis memakai artikel partitif: du (maskulin), de la (feminin), de l' (di depan vokal), des (jamak). « Je bois de l'eau » berarti 'saya minum air (sebagian air, bukan seluruh air di dunia)'. Bahasa Indonesia tidak menandai hal ini sama sekali, jadi inilah salah satu bagian yang paling mudah terlupakan. Bandingkan tiga kalimat: « j'aime le café » (saya suka kopi, pernyataan umum), « je bois du café » (saya minum kopi, sebagian), « je bois un café » (saya minum satu cangkir kopi).",
+      "caveats": [
+        "Sesudah kata penunjuk jumlah, partitif diganti de saja: beaucoup de café, un peu de sucre, un kilo de pommes. Menulis « beaucoup du café » adalah kesalahan.",
+        "Dalam kalimat negatif, du/de la/des menjadi de: « je ne bois pas de café ». Di depan vokal menjadi d': « je ne bois pas d'eau ».",
+        "Pilihan antara le, du, dan un sering tidak punya jawaban tunggal; bergantung pada apa yang ingin ditekankan pembicara. Yang jelas salah adalah menghilangkan penandanya sama sekali."
+      ],
+      "examples": [
+        {"fr": "Je voudrais du pain, s'il vous plaît.", "gloss": "Saya ingin roti, tolong."},
+        {"fr": "Elle boit de l'eau.", "gloss": "Dia minum air."},
+        {"fr": "Nous mangeons de la viande le dimanche.", "gloss": "Kami makan daging pada hari Minggu."},
+        {"fr": "Il y a beaucoup de voitures ici.", "gloss": "Ada banyak mobil di sini."}
+      ],
+      "items": [
+        {
+          "id": "g08-01",
+          "type": "mcq",
+          "prompt": "Penanda mana yang tepat: « Je voudrais ___ pain »?",
+          "prompt_fr": "Je voudrais ___ pain.",
+          "options_lang": "fr",
+          "options": ["du", "de la", "des", "de l'"],
+          "answer": 0,
+          "explain": "Pain maskulin tunggal dan diawali konsonan, sehingga partitifnya du. De la untuk feminin, de l' untuk yang diawali vokal, des untuk jamak."
+        },
+        {
+          "id": "g08-02",
+          "type": "mcq",
+          "prompt": "Penanda mana yang tepat: « Elle boit ___ eau »?",
+          "prompt_fr": "Elle boit ___ eau.",
+          "options_lang": "fr",
+          "options": ["de l'", "de la", "du", "des"],
+          "answer": 0,
+          "explain": "Eau feminin tetapi diawali bunyi vokal, sehingga de la menjadi de l'. Pola yang sama seperti la menjadi l'."
+        },
+        {
+          "id": "g08-03",
+          "type": "mcq",
+          "prompt": "Mana yang benar sesudah beaucoup?",
+          "prompt_fr": null,
+          "options_lang": "fr",
+          "options": [
+            "beaucoup de café",
+            "beaucoup du café",
+            "beaucoup le café",
+            "beaucoup des café"
+          ],
+          "answer": 0,
+          "explain": "Sesudah kata penunjuk jumlah, partitif menyusut menjadi de: beaucoup de, un peu de, trop de, assez de."
+        },
+        {
+          "id": "g08-04",
+          "type": "mcq",
+          "prompt": "Apa bedanya « j'aime le café » dan « je bois du café »?",
+          "prompt_fr": null,
+          "options_lang": "id",
+          "options": [
+            "Yang pertama pernyataan umum tentang kopi, yang kedua tentang sebagian kopi yang diminum",
+            "Yang pertama salah, hanya yang kedua benar",
+            "Yang pertama tentang kedai kopi, yang kedua tentang minumannya",
+            "Keduanya sama persis artinya"
+          ],
+          "answer": 0,
+          "explain": "Artikel takrif untuk pernyataan umum (suka kopi pada umumnya), partitif untuk sebagian yang nyata diminum. Keduanya benar pada tempatnya masing-masing."
+        },
+        {
+          "id": "g08-05",
+          "type": "mcq",
+          "prompt": "Bagaimana bentuk negatif dari « je bois de l'eau »?",
+          "prompt_fr": "je bois de l'eau",
+          "options_lang": "fr",
+          "options": [
+            "je ne bois pas d'eau",
+            "je ne bois pas de l'eau",
+            "je ne bois pas l'eau",
+            "je bois pas de l'eau"
+          ],
+          "answer": 0,
+          "explain": "Partitif menjadi de sesudah negasi, dan de menjadi d' di depan vokal: pas d'eau."
+        }
+      ]
+    },
+    {
+      "id": "g09",
+      "title": "Kata sifat: menyesuaikan diri dan sebagian mendahului",
+      "stage": 4,
+      "explanation": "Kata sifat Bahasa Prancis menyesuaikan diri dengan kata benda yang disifatinya, dalam gender dan jumlah: un livre vert, une porte verte, des livres verts, des portes vertes. Bahasa Indonesia tidak mengenal penyesuaian ini. Letaknya umumnya SESUDAH kata benda, berlawanan dengan Bahasa Indonesia yang juga menaruh sifat di belakang — jadi di sini keduanya mirip: une voiture rouge = mobil merah. Tetapi sekelompok kecil kata sifat yang sangat sering dipakai justru MENDAHULUI kata bendanya: grand, petit, bon, mauvais, beau, joli, nouveau, vieux, jeune, gros. Karena kelompok itu kecil, lebih mudah menghafalnya daripada menghafal aturan.",
+      "caveats": [
+        "Beberapa kata sifat berganti arti mengikuti letaknya: « un grand homme » (orang besar, tokoh) dan « un homme grand » (orang yang tinggi); « un ancien ami » (mantan teman) dan « un ami ancien » (teman lama).",
+        "Bentuk feminin umumnya menambahkan -e, dan -e itu membangunkan konsonan yang tadinya diam: vert /vɛʁ/ menjadi verte /vɛʁt/. Kata sifat yang sudah berakhiran -e tidak berubah: rouge, jaune, facile.",
+        "Ada bentuk feminin yang tidak beraturan dan harus dihafal: beau/belle, nouveau/nouvelle, vieux/vieille, blanc/blanche, long/longue. Semuanya ditandai di data materi ini."
+      ],
+      "examples": [
+        {"fr": "C'est une grande maison.", "gloss": "Itu rumah yang besar."},
+        {"fr": "J'ai une voiture rouge.", "gloss": "Saya punya mobil merah."},
+        {"fr": "Les livres sont nouveaux.", "gloss": "Buku-buku itu baru."},
+        {"fr": "La porte est blanche.", "gloss": "Pintunya putih."}
+      ],
+      "items": [
+        {
+          "id": "g09-01",
+          "type": "mcq",
+          "prompt": "Mana bentuk yang benar untuk « sebuah pintu hijau »?",
+          "prompt_fr": null,
+          "options_lang": "fr",
+          "options": [
+            "une porte verte",
+            "une porte vert",
+            "une verte porte",
+            "un porte verte"
+          ],
+          "answer": 0,
+          "explain": "Porte feminin, sehingga vert menjadi verte, dan warna diletakkan sesudah kata bendanya."
+        },
+        {
+          "id": "g09-02",
+          "type": "mcq",
+          "prompt": "Kata sifat mana yang diletakkan SEBELUM kata bendanya?",
+          "prompt_fr": null,
+          "options_lang": "fr",
+          "options": ["petit", "rouge", "français", "difficile"],
+          "answer": 0,
+          "explain": "Petit termasuk kelompok kecil yang mendahului: un petit livre. Warna, kebangsaan, dan bentuk selalu mengikuti kata bendanya."
+        },
+        {
+          "id": "g09-03",
+          "type": "mcq",
+          "prompt": "Apa bedanya « un grand homme » dan « un homme grand »?",
+          "prompt_fr": null,
+          "options_lang": "id",
+          "options": [
+            "Yang pertama berarti tokoh besar, yang kedua berarti orang bertubuh tinggi",
+            "Keduanya sama, hanya gaya penulisannya berbeda",
+            "Yang pertama salah tata bahasa",
+            "Yang pertama jamak, yang kedua tunggal"
+          ],
+          "answer": 0,
+          "explain": "Pada sebagian kata sifat, letaknya mengubah arti: di depan berarti kiasan, di belakang berarti harfiah."
+        },
+        {
+          "id": "g09-04",
+          "type": "mcq",
+          "prompt": "Mengapa vert dan verte berbeda bunyinya?",
+          "prompt_fr": null,
+          "options_lang": "id",
+          "options": [
+            "Akhiran -e feminin membangunkan huruf t yang tadinya diam",
+            "Karena bentuk feminin selalu lebih panjang bunyinya",
+            "Karena huruf e feminin dibunyikan /ə/",
+            "Karena aksennya berpindah ke suku terakhir"
+          ],
+          "answer": 0,
+          "explain": "Vert /vɛʁ/ dan verte /vɛʁt/. Inilah kerja utama -e feminin dalam lafal: ia tidak dibunyikan sendiri, tetapi memunculkan konsonan di depannya."
+        },
+        {
+          "id": "g09-05",
+          "type": "mcq",
+          "prompt": "Apa bentuk feminin dari blanc?",
+          "prompt_fr": "blanc",
+          "options_lang": "fr",
+          "options": ["blanche", "blance", "blanque", "blanc"],
+          "answer": 0,
+          "explain": "Blanche, dengan c berubah menjadi ch. Termasuk bentuk feminin tak beraturan seperti beau/belle dan vieux/vieille."
+        }
+      ]
+    },
+    {
+      "id": "g10",
+      "title": "Kata milik: mengikuti barangnya, bukan pemiliknya",
+      "stage": 5,
+      "explanation": "Kata milik Bahasa Prancis menyesuaikan diri dengan BARANG yang dimiliki, bukan dengan pemiliknya: mon livre (buku saya, livre maskulin), ma table (meja saya, table feminin), mes livres (buku-buku saya). Akibatnya « son livre » bisa berarti 'buku dia (lelaki)' atau 'buku dia (perempuan)' — yang menentukan son atau sa hanyalah gender bukunya. Inilah salah satu titik paling membingungkan bagi penutur Bahasa Indonesia dan Bahasa Inggris, karena 'his' dan 'her' justru mengikuti pemiliknya. Bentuknya: mon/ma/mes (saya), ton/ta/tes (kamu), son/sa/ses (dia), notre/nos (kami), votre/vos (Anda), leur/leurs (mereka).",
+      "caveats": [
+        "Di depan kata feminin yang diawali bunyi vokal, dipakai bentuk maskulin: « mon amie » (teman perempuan saya), bukan « ma amie ». Alasannya pelafalan, bukan gender.",
+        "Notre, votre, dan leur tidak membedakan gender sama sekali; hanya jumlahnya yang berubah (nos, vos, leurs).",
+        "Untuk bagian tubuh, Bahasa Prancis sering memakai artikel biasa, bukan kata milik: « je me lave les mains » (saya mencuci tangan saya), bukan « mes mains »."
+      ],
+      "examples": [
+        {"fr": "Mon père travaille à l'hôpital.", "gloss": "Ayah saya bekerja di rumah sakit."},
+        {"fr": "Ma mère est professeur.", "gloss": "Ibu saya seorang guru."},
+        {"fr": "Mes parents habitent à Bandung.", "gloss": "Orang tua saya tinggal di Bandung."},
+        {"fr": "C'est sa voiture.", "gloss": "Itu mobilnya."}
+      ],
+      "items": [
+        {
+          "id": "g10-01",
+          "type": "mcq",
+          "prompt": "Kata milik Bahasa Prancis menyesuaikan diri dengan apa?",
+          "prompt_fr": null,
+          "options_lang": "id",
+          "options": [
+            "Gender dan jumlah barang yang dimiliki",
+            "Gender pemiliknya",
+            "Jumlah pemiliknya saja",
+            "Letaknya dalam kalimat"
+          ],
+          "answer": 0,
+          "explain": "Mon livre dan ma table berbeda karena gender BARANGNYA, bukan karena pemiliknya. Pemiliknya sama-sama 'saya'."
+        },
+        {
+          "id": "g10-02",
+          "type": "mcq",
+          "prompt": "Apa dua arti yang mungkin dari « sa voiture »?",
+          "prompt_fr": "sa voiture",
+          "options_lang": "id",
+          "options": [
+            "Mobil dia (lelaki) atau mobil dia (perempuan)",
+            "Mobilnya atau mobil-mobilnya",
+            "Mobil Anda atau mobil mereka",
+            "Mobil itu atau mobil ini"
+          ],
+          "answer": 0,
+          "explain": "Sa hanya memberi tahu bahwa voiture feminin. Gender pemiliknya tidak terlihat sama sekali; harus diketahui dari konteks."
+        },
+        {
+          "id": "g10-03",
+          "type": "mcq",
+          "prompt": "Mana yang benar untuk « teman perempuan saya »?",
+          "prompt_fr": null,
+          "options_lang": "fr",
+          "options": ["mon amie", "ma amie", "mes amie", "ma amies"],
+          "answer": 0,
+          "explain": "Amie feminin, tetapi diawali bunyi vokal sehingga dipakai mon. Bentuk « ma amie » tidak pernah dipakai karena dua vokal bertumbukan."
+        },
+        {
+          "id": "g10-04",
+          "type": "mcq",
+          "prompt": "Mana yang benar untuk « buku-buku saya »?",
+          "prompt_fr": null,
+          "options_lang": "fr",
+          "options": ["mes livres", "mon livres", "ma livres", "mes livre"],
+          "answer": 0,
+          "explain": "Bentuk jamaknya mes untuk kedua gender, dan kata bendanya ikut berjamak: mes livres."
+        },
+        {
+          "id": "g10-05",
+          "type": "mcq",
+          "prompt": "Mana yang benar untuk « rumah kami »?",
+          "prompt_fr": null,
+          "options_lang": "fr",
+          "options": ["notre maison", "nos maison", "notre maisons", "nôtre maison"],
+          "answer": 0,
+          "explain": "Notre untuk satu barang, tanpa membedakan gender. Nos hanya dipakai bila barangnya jamak: nos maisons."
+        }
+      ]
+    },
+    {
+      "id": "g11",
+      "title": "Kata depan yang melebur: au, aux, du, des",
+      "stage": 5,
+      "explanation": "Kata depan à (ke, di) dan de (dari, milik) MELEBUR dengan artikel takrif, dan bentuk leburan itu wajib dipakai: à + le menjadi au, à + les menjadi aux, de + le menjadi du, de + les menjadi des. Jadi « je vais au marché », bukan « à le marché ». Dengan la dan l' tidak ada peleburan: à la gare, de l'hôtel. Untuk nama tempat ada kebiasaannya sendiri: à + nama kota (à Paris, à Jakarta), en + negara feminin (en France, en Indonésie), au + negara maskulin (au Japon), aux + negara jamak (aux États-Unis).",
+      "caveats": [
+        "Bentuk du dan des di sini kebetulan sama dengan artikel partitif (du pain), tetapi pekerjaannya berbeda: « je viens du marché » (dari pasar) dan « je mange du pain » (sebagian roti). Konteksnya yang membedakan.",
+        "Gender nama negara tidak bisa diterka maknanya, tetapi ada kecenderungan: negara berakhiran -e biasanya feminin (la France, la Chine, l'Indonésie), kecuali le Mexique dan le Cambodge.",
+        "Untuk mengatakan 'ke rumah seseorang' dipakai chez: « je vais chez Pierre », bukan « à Pierre »."
+      ],
+      "examples": [
+        {"fr": "Je vais au marché.", "gloss": "Saya pergi ke pasar."},
+        {"fr": "Elle revient du bureau.", "gloss": "Dia kembali dari kantor."},
+        {"fr": "Nous habitons en Indonésie.", "gloss": "Kami tinggal di Indonesia."},
+        {"fr": "Il travaille à la banque.", "gloss": "Dia bekerja di bank."}
+      ],
+      "items": [
+        {
+          "id": "g11-01",
+          "type": "mcq",
+          "prompt": "Bentuk mana yang benar: « je vais ___ marché »?",
+          "prompt_fr": "je vais ___ marché",
+          "options_lang": "fr",
+          "options": ["au", "à le", "à la", "aux"],
+          "answer": 0,
+          "explain": "À + le wajib melebur menjadi au. Bentuk « à le » tidak pernah ditulis maupun diucapkan."
+        },
+        {
+          "id": "g11-02",
+          "type": "mcq",
+          "prompt": "Bentuk mana yang benar: « il travaille ___ banque »?",
+          "prompt_fr": "il travaille ___ banque",
+          "options_lang": "fr",
+          "options": ["à la", "au", "à les", "aux"],
+          "answer": 0,
+          "explain": "Banque feminin, dan à + la tidak melebur: à la banque. Peleburan hanya terjadi dengan le dan les."
+        },
+        {
+          "id": "g11-03",
+          "type": "mcq",
+          "prompt": "Mana yang benar untuk « di Indonesia »?",
+          "prompt_fr": null,
+          "options_lang": "fr",
+          "options": ["en Indonésie", "à Indonésie", "au Indonésie", "dans Indonésie"],
+          "answer": 0,
+          "explain": "Negara feminin memakai en: en Indonésie, en France. Negara maskulin memakai au: au Japon. Nama kota memakai à: à Jakarta."
+        },
+        {
+          "id": "g11-04",
+          "type": "mcq",
+          "prompt": "Apa arti du pada « je viens du marché »?",
+          "prompt_fr": "je viens du marché",
+          "options_lang": "id",
+          "options": [
+            "Leburan de + le, yang berarti 'dari'",
+            "Artikel partitif yang berarti 'sebagian'",
+            "Bentuk jamak dari le",
+            "Bentuk sopan dari de"
+          ],
+          "answer": 0,
+          "explain": "Bentuknya sama dengan partitif du (du pain), tetapi di sini du adalah de + le. Kata kerja venir menuntut de, sehingga artinya 'dari pasar'."
+        },
+        {
+          "id": "g11-05",
+          "type": "mcq",
+          "prompt": "Mana yang benar untuk « ke rumah Pierre »?",
+          "prompt_fr": null,
+          "options_lang": "fr",
+          "options": ["chez Pierre", "à Pierre", "au Pierre", "dans Pierre"],
+          "answer": 0,
+          "explain": "Chez berarti 'di rumah / di tempat usaha seseorang': chez Pierre, chez le médecin, chez moi."
+        }
+      ]
+    },
+    {
+      "id": "g12",
+      "title": "Kemarin dan besok: passé composé dan futur proche",
+      "stage": 6,
+      "explanation": "Dua bentuk waktu yang sudah cukup untuk bercerita pada tingkat A1. (1) Passé composé untuk masa lalu: avoir atau être yang dikonjugasi, lalu participe passé. « J'ai mangé » (saya sudah makan), « nous avons parlé » (kami sudah berbicara). Kebanyakan kata kerja memakai avoir; sekelompok kecil kata kerja perpindahan memakai être (aller, venir, partir, arriver, entrer, sortir, rester, tomber, naître, mourir), dan dengan être participe passé-nya ikut menyesuaikan diri: « elle est allée ». (2) Futur proche untuk masa depan dekat: aller yang dikonjugasi + infinitif. « Je vais manger » (saya akan makan), « nous allons partir » (kami akan berangkat). Bahasa Indonesia memakai kata keterangan (sudah, akan) tanpa mengubah kata kerjanya; Bahasa Prancis mengubah bentuknya.",
+      "caveats": [
+        "Participe passé tidak bisa selalu diterka: -er menjadi -é (parlé), kelompok 2 menjadi -i (fini), tetapi kelompok 3 beragam (pris, fait, été, eu, bu, pu). Bentuknya disimpan di data/konjugasi.json.",
+        "Penyesuaian participe passé dengan être mengikuti gender dan jumlah pelakunya: il est allé, elle est allée, ils sont allés, elles sont allées. Dengan avoir, penyesuaian itu tidak terjadi dalam kalimat biasa.",
+        "Ada bentuk masa depan lain (futur simple: je mangerai) dan bentuk masa lalu lain (imparfait: je mangeais) yang dipakai untuk maksud berbeda. Keduanya di luar jangkauan tingkat A1 dan tidak dilatih di materi ini."
+      ],
+      "examples": [
+        {"fr": "Hier, j'ai mangé au restaurant.", "gloss": "Kemarin saya makan di restoran."},
+        {"fr": "Elle est allée au marché ce matin.", "gloss": "Dia pergi ke pasar pagi ini."},
+        {"fr": "Demain, je vais travailler à la maison.", "gloss": "Besok saya akan bekerja di rumah."},
+        {"fr": "Nous avons compris la question.", "gloss": "Kami sudah mengerti pertanyaannya."}
+      ],
+      "items": [
+        {
+          "id": "g12-01",
+          "type": "mcq",
+          "prompt": "Dari dua bagian apa passé composé tersusun?",
+          "prompt_fr": null,
+          "options_lang": "id",
+          "options": [
+            "Avoir atau être yang dikonjugasi, lalu participe passé",
+            "Aller yang dikonjugasi, lalu infinitif",
+            "Kata kerja yang dikonjugasi, lalu kata keterangan waktu",
+            "Infinitif, lalu akhiran masa lalu"
+          ],
+          "answer": 0,
+          "explain": "« J'ai mangé »: ai (avoir) + mangé (participe passé). Bentuk aller + infinitif adalah futur proche, bukan passé composé."
+        },
+        {
+          "id": "g12-02",
+          "type": "mcq",
+          "prompt": "Mana bentuk passé composé yang benar untuk « nous parlons »?",
+          "prompt_fr": "nous parlons",
+          "options_lang": "fr",
+          "options": [
+            "nous avons parlé",
+            "nous sommes parlés",
+            "nous avons parlons",
+            "nous allons parler"
+          ],
+          "answer": 0,
+          "explain": "Parler memakai auxiliaire avoir, dan participe passé-nya parlé. « Nous allons parler » berarti 'kami akan berbicara'."
+        },
+        {
+          "id": "g12-03",
+          "type": "mcq",
+          "prompt": "Mengapa ditulis « elle est allée » dengan dua e di akhir?",
+          "prompt_fr": "elle est allée",
+          "options_lang": "id",
+          "options": [
+            "Karena dengan être, participe passé menyesuaikan diri dengan pelakunya",
+            "Karena aller selalu ditulis dengan dua e",
+            "Karena elle menuntut akhiran -e pada semua kata",
+            "Karena bentuk itu jamak"
+          ],
+          "answer": 0,
+          "explain": "Dengan auxiliaire être, participe passé berlaku seperti kata sifat: allé, allée, allés, allées. Dengan avoir tidak ada penyesuaian."
+        },
+        {
+          "id": "g12-04",
+          "type": "mcq",
+          "prompt": "Mana bentuk futur proche yang benar untuk « saya akan makan »?",
+          "prompt_fr": null,
+          "options_lang": "fr",
+          "options": [
+            "je vais manger",
+            "je vais mangé",
+            "j'ai manger",
+            "je veux manger"
+          ],
+          "answer": 0,
+          "explain": "Aller + INFINITIF, bukan participe passé. « Je veux manger » berarti 'saya mau makan', bukan 'akan makan'."
+        },
+        {
+          "id": "g12-05",
+          "type": "mcq",
+          "prompt": "Kata kerja mana yang memakai auxiliaire être pada passé composé?",
+          "prompt_fr": null,
+          "options_lang": "fr",
+          "options": ["partir", "manger", "comprendre", "travailler"],
+          "answer": 0,
+          "explain": "Partir termasuk kelompok kecil kata kerja perpindahan: je suis parti. Tiga lainnya memakai avoir."
+        }
+      ]
+    }
+  ]
+}
